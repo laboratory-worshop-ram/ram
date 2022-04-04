@@ -21,6 +21,12 @@ a:focus {
 	outline: none;
 }
 
+.icon { 
+  width: 70px; 
+  fill: #4D4D60;
+
+}
+
 h2 { font-size: 2.2rem; }
 .tm-thin-font { font-weight: 300; }
 
