@@ -67,9 +67,33 @@ http://www.templatemo.com/tm-488-classic
 
 
         <section class="tm-section">
-            <div class="container-fluid">
+
+            <div style="display: flex; margin-bottom: 70px;">   
+                <div class="dropdown" style="margin: 35px;">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Выберите модуль памяти
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item dropdown-item1 active" id="sdr" href="#">SDR SDRAM</a>
+                    <a class="dropdown-item dropdown-item1" id="ddr" href="#">DDR SDRAM</a>
+                    <a class="dropdown-item dropdown-item1" id="ddr2" href="#">DDR2 SDRAM</a>
+                  </div>
+                </div>
+                <div class="dropdown" style="margin: 35px;">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Выберите тип операции
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item dropdown-item2 active" href="#">Чтение</a>
+                    <a class="dropdown-item dropdown-item2" href="#">Запись</a>
+                  </div>
+                </div>
+                <button type="button" style="margin: 35px;" class="btn btn-warning">Применить</button>
+            </div> 
+
+            <div class="container-fluid" style="overflow: auto;">
                 
-                <div class="row tm-margin-t-mid">
+                <div class="row tm-margin-t-mid ram" id="sdr" style="width: 1000px; height: 40vh; margin-left: 50px;">
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -92,7 +116,7 @@ http://www.templatemo.com/tm-488-classic
                     
                 </div>
 
-                <div class="row tm-margin-t-mid">
+                <div class="row tm-margin-t-mid ram hidden" id="ddr" style="width: 1000px; height: 40vh; margin-left: 50px;">
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -151,6 +175,6 @@ http://www.templatemo.com/tm-488-classic
         <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
         <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
         <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
-       
+       <script src="js/scripts.js"></script> 
 </body>
 </html>

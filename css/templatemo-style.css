@@ -435,3 +435,7 @@ p { line-height: 1.9; }
 		margin-right: auto;
 	}
 }
+
+.ram.hidden {
+	display: none;
+}
