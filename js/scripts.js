@@ -29,16 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    for (const ram of ramItems) {
-        btnWarning.addEventListener('click', () => {
-            dropdownItem1.forEach(item => {
-                if (!item.classList.contains('active') && (ram.id === item.id)) {
+    btnWarning.addEventListener('click', () => {
+        for (const ram of ramItems) {
+            ram.classList.add('hidden');
+            dropdownItem1.forEach(item1 => {
+                if (!item1.classList.contains('active') && (ram.dataset.module === item1.dataset.module)) {
                     ram.classList.add('hidden');
-                } else if (item.classList.contains('active') && (ram.id === item.id)) {
-                    ram.classList.remove('hidden');
+                } else if (item1.classList.contains('active') && (ram.dataset.module === item1.dataset.module)) {
+                    dropdownItem2.forEach(item2 => {
+                        if (!item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
+                            ram.classList.add('hidden');
+                        } else if (item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
+                            ram.classList.remove('hidden');
+                        }
+                    })
                 }
             })
-        })
-    }
+        }
+    })
 
 });
