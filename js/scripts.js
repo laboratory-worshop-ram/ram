@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     btnWarning.addEventListener('click', () => {
+        //location.reload();
         for (const ram of ramItems) {
             ram.classList.add('hidden');
             dropdownItem1.forEach(item1 => {
