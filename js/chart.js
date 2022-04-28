@@ -7,76 +7,10 @@ const purpul = 'rgb(153, 102, 255)';
 
 
 const labels = [
-  ' ',' ',' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
-  ' ',
+  '', '', '', '', '', '', '', '', '', '', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ];
 
 const data = {
@@ -123,19 +57,63 @@ const data = {
   ]
 };
 
+const data2 = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Clock',
+      data: [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 
+      0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
+       1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1],
+      borderColor: red,
+      backgroundColor: red,
+      //stepped: true,
+      yAxisID: 'y2',
+      pointRadius: 0,
+    },
+    {
+      label: 'Command',
+      data: [0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: green,
+      backgroundColor: green,
+      pointRadius: 0,
+      yAxisID: 'y3',
+    },
+    {
+      label: 'Address',
+      data: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: blue,
+      backgroundColor: blue,
+      pointRadius: 0,
+      yAxisID: 'y4',
+    },
+    {
+      label: 'Data',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1,
+       0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: purpul,
+      backgroundColor: purpul,
+      pointRadius: 0,
+    },
+    
+  ]
+};
+
 let delayed;
 const config = {
   type: 'line',
   data: data,
   options: {
     animation: {
-      onComplete: () => {
+      /*onComplete: () => {
         delayed = true;
-      },
+      },*/
       delay: (context) => {
         let delay = 0;
         if (context.type === 'data' && context.mode === 'default' && !delayed) {
-          delay = context.dataIndex * 300 + context.datasetIndex * 100;
+          delay = context.dataIndex * 250;
         }
         return delay;
       },
@@ -171,7 +149,6 @@ const config = {
           borderColor: green
         }
       },
-
       y2: {
         type: 'linear',
         offset: true,
@@ -186,21 +163,86 @@ const config = {
   },
 };
 
-var sdrCharts = document.getElementsByClassName('chartsdr');
+const config2 = {
+  type: 'line',
+  data: data2,
+  options: {
+    animation: {
+      /*onComplete: () => {
+        delayed = true;
+      },*/
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !delayed) {
+          delay = context.dataIndex * 250;
+        }
+        return delay;
+      },
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: purpul
+        }
+      },
+      y4: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: blue
+        }
+      },
+      y3: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: green
+        }
+      },
+      y2: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: red
+        }
+      },
+    }
+  },
+};
 
-const myChart0 = new Chart(
-  sdrCharts[0],
-  config
-);
+const ramItems = document.querySelectorAll('.ram');
+var ctx = document.getElementById('chart');
+var chart;
 
+(function(){
 
-(function() { // self calling function replaces document.ready()
+  document.querySelector('#button1').addEventListener('click',function(){
+    if (chart) {chart.destroy();}
+    for (const ram of ramItems) {
+      if (ram.dataset.module === 'sdr' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config);
+      } else if (ram.dataset.module === 'ddr' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config2);
+      }
+    }
+  });
 
-//adding event listenr to button
-    document.querySelector('#warning').addEventListener('click',function(){
-
-    myChart0.destroy();
-    const myChart1 = new Chart(sdrCharts[1],config);
+  document.querySelector('#warning').addEventListener('click',function(){
+    if (chart) {chart.destroy();}
   });
 
 })();

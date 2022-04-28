@@ -52,9 +52,6 @@
                                     <a href="about.html" class="nav-link">Моделирование</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">Тестирование</a>
-                                </li>
-                                <li class="nav-item">
                                     <a href="contact.html" class="nav-link">Задания</a>
                                 </li>
                             </ul>                        
@@ -69,8 +66,8 @@
 
         <section class="tm-section">
 
-            <div style="display: flex; margin-bottom: 70px;">   
-                <div class="dropdown" style="margin: 35px; margin-left: 80px">
+            <div style="display: flex; margin: 0 auto; width: max-content">   
+                <div class="dropdown" style="margin: 20px;">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Выберите модуль памяти
                   </button>
@@ -84,7 +81,7 @@
                     <a class="dropdown-item dropdown-item1" data-module="gddr" href="#">GDDR</a>
                   </div>
                 </div>
-                <div class="dropdown" style="margin: 35px;">
+                <div class="dropdown" style="margin: 20px;">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Выберите тип операции
                   </button>
@@ -93,13 +90,13 @@
                     <a class="dropdown-item dropdown-item2" data-op="w" href="#">Запись</a>
                   </div>
                 </div>
-                <button type="button" style="margin: 35px; background-color: #cc9900; color: white;" class="btn btn-warning" id="warning">Применить</button>
+                <button type="button" style="margin: 20px; background-color: #cc9900; color: white;" class="btn btn-warning" id="warning">Применить</button>
             </div> 
 
             <div class="container-fluid" style="overflow: auto;">
                 
-                <div class="row tm-margin-t-mid ram" data-module="sdr" data-op="r" style="width: 1000px; height: 800px; margin-left: 50px;">
-                    <h2 style="margin-bottom: 50px; color: #333340;">SDR SDRAM (Чтение)</h2>
+                <div class="row tm-margin-t-mid ram" data-module="sdr" data-op="r">
+                    <h2>SDR SDRAM (Чтение)</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -119,14 +116,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="45" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-
-                    <div style="margin-top: 70px;">
-                        <canvas class="chartsdr"></canvas>
-                    </div>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w" style="width: 1000px; height: 800px; margin-left: 50px;">
-                    <h2 style="margin-bottom: 50px; color: #333340;">SDR SDRAM (Запись)</h2>
+                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w">
+                    <h2>SDR SDRAM (Запись)</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -146,14 +139,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="45" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-
-                    <div style="margin-top: 70px;">
-                        <canvas class="chartsdr"></canvas>
-                    </div>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r" style="width: 1000px; height: 1000px; margin-left: 50px;">
-                    <h2 style="margin-bottom: 50px; color: #333340;">DDR SDRAM (Чтение)</h2>
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r">
+                    <h2>DDR SDRAM (Чтение)</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -194,7 +183,8 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="w" style="width: 1000px; height: 400px; margin-left: 50px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="w">
+                    <h2>DDR SDRAM (Запись)</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -232,10 +222,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="80" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="r" style="width: 1000px; height: 50vh; margin-left: 50px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="r">
+                    <h2>DDR2 SDRAM (Чтение)</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -291,7 +281,8 @@
                     </svg>
                     
                 </div>
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="w" style="width: 1000px; height: 50vh; margin-left: 50px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="w">
+                    <h2>DDR2 SDRAM (Запись)</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -348,7 +339,8 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="r" style="width: 1000px; height: 650px; margin-left: 50px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="r">
+                    <h2>DDR3 SDRAM (Чтение)</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -437,7 +429,8 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="w" style="width: 1000px; height: 650px; margin-left: 50px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="w">
+                    <h2>DDR3 SDRAM (Запись)</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -526,10 +519,11 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="r" style="width: 1000px; height: 770px; margin-left: 50px; position: relative;">
-                    <svg width="470" height="340" style="position: absolute; top: 0; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="r">
+                    <h2>DDR4 SDRAM (Чтение)</h2>
+                    <svg width="470" height="340" style="position: absolute; top: 80px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
-                    <svg width="470" height="340" style="position: absolute; top: 390px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
+                    <svg width="470" height="340" style="position: absolute; top: 470px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
                     <svg width="254" height="700"> 
                         <rect x="2" y="2" rx="10"
@@ -699,10 +693,11 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="w" style="width: 1000px; height: 770px; margin-left: 50px; position: relative;">
-                    <svg width="470" height="340" style="position: absolute; top: 0; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="w">
+                    <h2>DDR4 SDRAM (Запись)</h2>
+                    <svg width="470" height="340" style="position: absolute; top: 80px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
-                    <svg width="470" height="340" style="position: absolute; top: 390px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
+                    <svg width="470" height="340" style="position: absolute; top: 470px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
                     <svg width="254" height="700"> 
                         <rect x="2" y="2" rx="10"
@@ -872,7 +867,7 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="gddr" data-op="r" style="width: 1000px; height: 770px; margin-left: 50px; position: relative;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="gddr" data-op="r" style="width: 1000px; height: 770px; margin-left: 50px; position: relative;">
                     <svg width="470" height="340" style="position: absolute; top: 0; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
                     <svg width="470" height="340" style="position: absolute; top: 390px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
@@ -1043,6 +1038,11 @@
                           <text x="35" y="355" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
                     
+                </div>-->
+
+                <button class="btn btn-warning" id="button1" style="display: block; margin-left: auto; margin-right: auto">Запуск</button>
+                <div style="margin: 50px auto; width: 800px; ">
+                    <canvas id="chart"></canvas>
                 </div>
 
             </div>
