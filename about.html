@@ -93,9 +93,9 @@
                 <button type="button" style="margin: 20px; background-color: #cc9900; color: white;" class="btn btn-warning" id="warning">Применить</button>
             </div> 
 
-            <div class="container-fluid" style="overflow: auto;">
+            <div class="container-fluid" style="overflow: auto; display: flex;">
                 
-                <div class="row tm-margin-t-mid ram" data-module="sdr" data-op="r">
+                <div class="row tm-margin-t-mid ram" data-module="sdr" data-op="r" style="zoom: .9;">
                     <h2>SDR SDRAM (Чтение)</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
@@ -118,7 +118,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w">
+                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w" style="zoom: .9;">
                     <h2>SDR SDRAM (Запись)</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
@@ -141,7 +141,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r" style="zoom: .8;">
                     <h2>DDR SDRAM (Чтение)</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
@@ -183,7 +183,7 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="w">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="w" style="zoom: .8;">
                     <h2>DDR SDRAM (Запись)</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
@@ -224,7 +224,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="r">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="r" style="zoom: .8;">
                     <h2>DDR2 SDRAM (Чтение)</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
@@ -281,7 +281,7 @@
                     </svg>
                     
                 </div>
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="w">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="w" style="zoom: .8;">
                     <h2>DDR2 SDRAM (Запись)</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
@@ -339,7 +339,7 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="r">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="r" style="zoom: .8;">
                     <h2>DDR3 SDRAM (Чтение)</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
@@ -429,7 +429,7 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="w">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="w" style="zoom: .8;">
                     <h2>DDR3 SDRAM (Запись)</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
@@ -519,7 +519,7 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="r">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="r" style="zoom: .7;">
                     <h2>DDR4 SDRAM (Чтение)</h2>
                     <svg width="470" height="340" style="position: absolute; top: 80px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
@@ -693,7 +693,7 @@
                     
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="w">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="w" style="zoom: .7;">
                     <h2>DDR4 SDRAM (Запись)</h2>
                     <svg width="470" height="340" style="position: absolute; top: 80px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
@@ -867,181 +867,8 @@
                     
                 </div>
 
-                <!--<div class="row tm-margin-t-mid ram hidden" data-module="gddr" data-op="r" style="width: 1000px; height: 770px; margin-left: 50px; position: relative;">
-                    <svg width="470" height="340" style="position: absolute; top: 0; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
-                    </svg>
-                    <svg width="470" height="340" style="position: absolute; top: 390px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
-                    </svg>
-                    <svg width="254" height="700"> 
-                        <rect x="2" y="2" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="26" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="41" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="65" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="80" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="104" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="119" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="143" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="158" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="182" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="197" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="221" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="236" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="260" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="275" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="299" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="390" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="414" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="429" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="453" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="468" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="492" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="507" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="531" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="546" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="570" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="585" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="609" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="624" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="648" font-size="20" fill="#333340">Memory Array</text>
-
-                          <rect x="2" y="663" rx="10"
-                          ry="10" width="250" height="35"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="687" font-size="20" fill="#333340">Memory Array</text>
-                    </svg>
-                    <svg class="icon" height="700" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-58" xlink:href="#left"></use>
-                        <use y="-97" xlink:href="#left"></use>
-                        <use y="-136" xlink:href="#left"></use>
-                        <use y="-175" xlink:href="#left"></use>
-                        <use y="-214" xlink:href="#left"></use>
-                        <use y="-253" xlink:href="#left"></use>
-                        <use y="-292" xlink:href="#left"></use>
-                        <use y="-331" xlink:href="#left"></use>
-                        <use y="58" xlink:href="#left"></use>
-                        <use y="97" xlink:href="#left"></use>
-                        <use y="136" xlink:href="#left"></use>
-                        <use y="175" xlink:href="#left"></use>
-                        <use y="214" xlink:href="#left"></use>
-                        <use y="253" xlink:href="#left"></use>
-                        <use y="292" xlink:href="#left"></use>
-                        <use y="331" xlink:href="#left"></use>
-                    </svg>
-                    <svg width="104" height="700"> 
-                        <rect x="2" y="10"  width="100" height="290"
-                          style="fill:#FFE5CC; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                        <text x="30" y="160" font-size="20" fill="#333340">MUX</text>
-                        <rect x="2" y="400"  width="100" height="290"
-                          style="fill:#FFE5CC; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                        <text x="30" y="550" font-size="20" fill="#333340">MUX</text>
-                    </svg>
-                    <svg class="icon" height="700" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-195" xlink:href="#left"></use>
-                        <use y="195" xlink:href="#left"></use>
-                    </svg>
-                    <svg width="104" height="700"> 
-                        <rect x="2" y="10"  width="100" height="670"
-                          style="fill:#FFE5CC; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="30" y="360" font-size="20" fill="#333340">MUX</text>
-                    </svg>
-                    <svg class="icon" height="700" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#left"></use>
-                    </svg>
-                    <svg width="254" height="700"> 
-                        <rect x="2" y="315" rx="10"
-                          ry="10" width="250" height="70"
-                          style="fill:#9999BF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="35" y="355" font-size="20" fill="#333340">Input/Output Buffers</text>
-                    </svg>
-                    
-                </div>-->
-
-                <button class="btn btn-warning" id="button1" style="display: block; margin-left: auto; margin-right: auto">Запуск</button>
-                <div style="margin: 50px auto; width: 800px; ">
+                <div style="margin: 50px auto; width: 700px; ">
+                    <button class="btn btn-warning" id="button1" style="display: block; margin-left: auto; margin-right: auto">Запуск</button>
                     <canvas id="chart"></canvas>
                 </div>
 
