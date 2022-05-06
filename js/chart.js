@@ -511,6 +511,10 @@ var chart;
         chart = new Chart(ctx, config2);
       } else if (ram.dataset.module === 'ddr4' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
+      } else if (ram.dataset.module === 'ddr42' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config2);
+      } else if (ram.dataset.module === 'ddr5' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config2);
       }
     }
   });
