@@ -14,7 +14,7 @@ const labels = [
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ];
 
-const labels2 = [
+const labels1 = [
 '', '', '', '', '', '', '', '', '', '', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
 ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
 ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -64,8 +64,8 @@ const data = {
   ]
 };
 
-const data2 = {
-  labels: labels2,
+const data1 = {
+  labels: labels1,
   datasets: [
     {
       label: 'Clock',
@@ -114,6 +114,84 @@ const data2 = {
     },
     {
       label: 'Data (2n bit)',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0,
+       1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0,],
+      borderColor: purpul,
+      backgroundColor: purpul,
+      pointRadius: 0,
+    },
+    
+  ]
+};
+
+const data2 = {
+  labels: labels1,
+  datasets: [
+    {
+      label: 'Clock',
+      data: [0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 
+      0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+      borderColor: red,
+      backgroundColor: red,
+      yAxisID: 'y2',
+      pointRadius: 0,
+    },
+    {
+      label: 'Command',
+      data: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+       1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: green,
+      backgroundColor: green,
+      pointRadius: 0,
+      yAxisID: 'y3',
+    },
+    {
+      label: 'Address',
+      data: [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+       1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: blue,
+      backgroundColor: blue,
+      pointRadius: 0,
+      yAxisID: 'y4',
+    },
+    {
+      label: 'Line 1 (n bit)',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: orange,
+      pointRadius: 0,
+      yAxisID: 'y5',
+    },
+    {
+      label: 'Line 2 (n bit)',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: orange,
+      pointRadius: 0,
+      yAxisID: 'y6',
+    },
+    {
+      label: 'Line 3 (n bit)',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: orange,
+      pointRadius: 0,
+      yAxisID: 'y7',
+    },
+    {
+      label: 'Line 4 (n bit)',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: orange,
+      pointRadius: 0,
+      yAxisID: 'y8',
+    },
+    {
+      label: 'Data (4n bit)',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0,
        1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0,],
       borderColor: purpul,
@@ -214,9 +292,9 @@ const config = {
   plugins: [customLegend]
 };
 
-const config2 = {
+const config1 = {
   type: 'line',
-  data: data2,
+  data: data1,
   options: {
     /*animation: {
       /*onComplete: () => {
@@ -304,6 +382,116 @@ const config2 = {
   plugins: [customLegend]
 };
 
+const config2 = {
+  type: 'line',
+  data: data2,
+  options: {
+    /*animation: {
+      /*onComplete: () => {
+        delayed = true;
+      },
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !delayed) {
+          delay = context.dataIndex * 250 ;
+          context.dataset.borderColor = red;
+        }
+        return delay;
+      },
+    },*/
+    layout: {
+      padding: {
+        left: (context) => {
+          return context.chart.ctx.measureText('Line 1 (n bit)').width + 15;
+        }
+      }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: purpul
+        }
+      },
+       y8: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: orange
+        }
+      },
+      y7: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: orange
+        }
+      },
+      y6: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: orange
+        }
+      },
+      y5: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: orange
+        }
+      },
+      y4: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: blue
+        }
+      },
+      y3: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: green
+        }
+      },
+      y2: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: red
+        }
+      },
+    }
+  },
+  plugins: [customLegend]
+};
+
 const ramItems = document.querySelectorAll('.ram');
 var ctx = document.getElementById('chart');
 var chart;
@@ -316,6 +504,12 @@ var chart;
       if (ram.dataset.module === 'sdr' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config);
       } else if (ram.dataset.module === 'ddr' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config1);
+      } else if (ram.dataset.module === 'ddr2' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config2);
+      } else if (ram.dataset.module === 'ddr3' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config2);
+      } else if (ram.dataset.module === 'ddr4' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
       }
     }
