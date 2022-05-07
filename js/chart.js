@@ -8,18 +8,52 @@ const transparent = 'rgba(255, 255, 255, 0)';
 
 
 const labels = [
-  '', '', '', '', '', '', '', '', '', '', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ];
 
 const labels1 = [
-'', '', '', '', '', '', '', '', '', '', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ];
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ];
+
+// <block:animation:1>
+const totalDuration = 5000;
+const delayBetweenPoints = totalDuration / labels1.length;
+const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
+const animation = {
+  x: {
+    type: 'number',
+    easing: 'linear',
+    duration: delayBetweenPoints,
+    from: NaN, // the point is initially skipped
+    delay(ctx) {
+      if (ctx.type !== 'data' || ctx.xStarted) {
+        return 0;
+      }
+      ctx.xStarted = true;
+      return ctx.index * delayBetweenPoints;
+    }
+  },
+  y: {
+    type: 'number',
+    easing: 'linear',
+    duration: delayBetweenPoints,
+    from: previousY,
+    delay(ctx) {
+      if (ctx.type !== 'data' || ctx.yStarted) {
+        return 0;
+      }
+      ctx.yStarted = true;
+      return ctx.index * delayBetweenPoints;
+    }
+  }
+};
+// </block:animation>
 
 const data = {
   labels: labels,
@@ -29,7 +63,7 @@ const data = {
       data: [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 
       0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
        1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1],
-      borderColor: transparent,
+      borderColor: red,
       backgroundColor: red,
       yAxisID: 'y2',
       pointRadius: 0,
@@ -227,7 +261,7 @@ const config = {
   data: data,
   options: {
     /*animation: {
-      /*onComplete: () => {
+      onComplete: () => {
         delayed = true;
       },
       delay: (context) => {
@@ -239,6 +273,10 @@ const config = {
         return delay;
       },
     },*/
+    animation,
+    interaction: {
+      intersect: false
+    },
     layout: {
       padding: {
         left: (context) => {
@@ -297,7 +335,7 @@ const config1 = {
   data: data1,
   options: {
     /*animation: {
-      /*onComplete: () => {
+      onComplete: () => {
         delayed = true;
       },
       delay: (context) => {
@@ -309,6 +347,10 @@ const config1 = {
         return delay;
       },
     },*/
+    animation,
+    interaction: {
+      intersect: false
+    },
     layout: {
       padding: {
         left: (context) => {
@@ -387,7 +429,7 @@ const config2 = {
   data: data2,
   options: {
     /*animation: {
-      /*onComplete: () => {
+      onComplete: () => {
         delayed = true;
       },
       delay: (context) => {
@@ -399,6 +441,10 @@ const config2 = {
         return delay;
       },
     },*/
+    animation,
+    interaction: {
+      intersect: false
+    },
     layout: {
       padding: {
         left: (context) => {
