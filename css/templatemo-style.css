@@ -447,6 +447,10 @@ p { line-height: 1.9; }
 	display: none;
 }
 
+.vari.hidden {
+	display: none;
+}
+
 .ram {
 	width: max-content;
 	height: max-content;
