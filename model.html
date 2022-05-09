@@ -20,8 +20,8 @@
 
     <body>
         <svg width="0" height="0" class="hidden">
-            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 38" id="1">
-            <path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM130.768 20.7678C131.744 19.7915 131.744 18.2085 130.768 17.2322L114.858 1.32233C113.882 0.34602 112.299 0.34602 111.322 1.32233C110.346 2.29864 110.346 3.88155 111.322 4.85786L125.464 19L111.322 33.1421C110.346 34.1184 110.346 35.7014 111.322 36.6777C112.299 37.654 113.882 37.654 114.858 36.6777L130.768 20.7678ZM3 21.5H129V16.5H3V21.5Z"></path>
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 38" id="both">
+                <path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM130.768 20.7678C131.744 19.7915 131.744 18.2085 130.768 17.2322L114.858 1.32233C113.882 0.34602 112.299 0.34602 111.322 1.32233C110.346 2.29864 110.346 3.88155 111.322 4.85786L125.464 19L111.322 33.1421C110.346 34.1184 110.346 35.7014 111.322 36.6777C112.299 37.654 113.882 37.654 114.858 36.6777L130.768 20.7678ZM3 21.5H129V16.5H3V21.5Z"></path>
             </symbol>
             <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 38" id="left">
                 <path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM3 21.5H129V16.5H3V21.5Z" fill="black"></path>
@@ -78,11 +78,11 @@
                 </div>
                 <div class="dropdown" style="margin: 20px;">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Выберите тип операции
+                    Выберите режим моделирования
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item dropdown-item2 active" data-op="r" href="#">Чтение</a>
-                    <a class="dropdown-item dropdown-item2" data-op="w" href="#">Запись</a>
+                    <a class="dropdown-item dropdown-item2 active" data-op="r" href="#">Общий</a>
+                    <a class="dropdown-item dropdown-item2" data-op="w" href="#">Детальный</a>
                   </div>
                 </div>
                 <button type="button" style="margin: 20px; background-color: #cc9900; color: white;" class="btn btn-warning" id="warning">Применить</button>
@@ -91,7 +91,7 @@
             <div class="container-fluid" style="overflow: auto; display: flex; flex-wrap: wrap;">
                 
                 <div class="row tm-margin-t-mid ram" data-module="sdr" data-op="r" style="zoom: .9;">
-                    <h2>SDR SDRAM (Чтение)</h2>
+                    <h2>SDR SDRAM</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -101,7 +101,7 @@
                           <text x="60" y="45" font-size="20" fill="#333340">Memory Array</text>
                     </svg>
                     <svg class="icon" height="74" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
@@ -113,7 +113,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w" style="zoom: .9;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w" style="zoom: .9;">
                     <h2>SDR SDRAM (Запись)</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
@@ -134,10 +134,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="45" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                </div>
+                </div>-->
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r" style="zoom: .8;">
-                    <h2>DDR SDRAM (Чтение)</h2>
+                    <h2>DDR SDRAM</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -154,8 +154,8 @@
                           <text x="60" y="120" font-size="20" fill="#333340">Memory Array</text>
                     </svg>
                     <svg class="icon" height="150" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-35" xlink:href="#right"></use>
-                        <use y="35" xlink:href="#right"></use>
+                        <use y="-35" xlink:href="#both"></use>
+                        <use y="35" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="150"> 
                         <rect x="2" y="10"  width="100" height="130"
@@ -165,7 +165,7 @@
                           <text x="30" y="80" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="150" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="150"> 
                         <rect x="2" y="40" rx="10"
@@ -175,10 +175,9 @@
                           stroke-width:2"></rect>
                           <text x="35" y="80" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="w" style="zoom: .8;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="w" style="zoom: .8;">
                     <h2>DDR SDRAM (Запись)</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
@@ -217,10 +216,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="80" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                </div>
+                </div>-->
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="r" style="zoom: .8;">
-                    <h2>DDR2 SDRAM (Чтение)</h2>
+                    <h2>DDR2 SDRAM</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -251,10 +250,10 @@
                           <text x="60" y="273" font-size="20" fill="#333340">Memory Array</text>
                     </svg>
                     <svg class="icon" height="310" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-40" xlink:href="#right"></use>
-                        <use y="35" xlink:href="#right"></use>
-                        <use y="-115" xlink:href="#right"></use>
-                        <use y="110" xlink:href="#right"></use>
+                        <use y="-40" xlink:href="#both"></use>
+                        <use y="35" xlink:href="#both"></use>
+                        <use y="-115" xlink:href="#both"></use>
+                        <use y="110" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="310"> 
                         <rect x="2" y="10"  width="100" height="280"
@@ -264,7 +263,7 @@
                           <text x="30" y="160" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="310" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="310"> 
                         <rect x="2" y="118" rx="10"
@@ -273,10 +272,10 @@
                           stroke:#4D4D60;
                           stroke-width:2"></rect>
                           <text x="35" y="160" font-size="20" fill="#333340">Input/Output Buffers</text>
-                    </svg>
-                    
+                    </svg> 
                 </div>
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="w" style="zoom: .8;">
+
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="w" style="zoom: .8;">
                     <h2>DDR2 SDRAM (Запись)</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
@@ -330,12 +329,11 @@
                           stroke:#4D4D60;
                           stroke-width:2"></rect>
                           <text x="35" y="160" font-size="20" fill="#333340">Input/Output Buffers</text>
-                    </svg>
-                    
-                </div>
+                    </svg> 
+                </div>-->
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="r" style="zoom: .8;">
-                    <h2>DDR3 SDRAM (Чтение)</h2>
+                    <h2>DDR3 SDRAM</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -394,14 +392,14 @@
                           <text x="60" y="577" font-size="20" fill="#333340">Memory Array</text>
                     </svg>
                     <svg class="icon" height="610" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-40" xlink:href="#right"></use>
-                        <use y="35" xlink:href="#right"></use>
-                        <use y="-115" xlink:href="#right"></use>
-                        <use y="110" xlink:href="#right"></use>
-                        <use y="185" xlink:href="#right"></use>
-                        <use y="260" xlink:href="#right"></use>
-                        <use y="-190" xlink:href="#right"></use>
-                        <use y="-265" xlink:href="#right"></use>
+                        <use y="-40" xlink:href="#both"></use>
+                        <use y="35" xlink:href="#both"></use>
+                        <use y="-115" xlink:href="#both"></use>
+                        <use y="110" xlink:href="#both"></use>
+                        <use y="185" xlink:href="#both"></use>
+                        <use y="260" xlink:href="#both"></use>
+                        <use y="-190" xlink:href="#both"></use>
+                        <use y="-265" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="610"> 
                         <rect x="2" y="10"  width="100" height="580"
@@ -411,7 +409,7 @@
                           <text x="30" y="310" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="610" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="610"> 
                         <rect x="2" y="268" rx="10"
@@ -420,11 +418,10 @@
                           stroke:#4D4D60;
                           stroke-width:2"></rect>
                           <text x="35" y="310" font-size="20" fill="#333340">Input/Output Buffers</text>
-                    </svg>
-                    
+                    </svg> 
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="w" style="zoom: .8;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="w" style="zoom: .8;">
                     <h2>DDR3 SDRAM (Запись)</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
@@ -511,11 +508,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="310" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
-                </div>
+                </div>-->
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="r" style="zoom: .7;">
-                    <h2>DDR4 SDRAM x8 (Чтение)</h2>
+                    <h2>DDR4 SDRAM (x8)</h2>
                     <svg width="470" height="340" style="position: absolute; top: 90px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
                     <svg width="470" height="340" style="position: absolute; top: 480px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
@@ -634,22 +630,22 @@
                           <text x="60" y="687" font-size="20" fill="#333340">Memory Array</text>
                     </svg>
                     <svg class="icon" height="700" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-58" xlink:href="#right"></use>
-                        <use y="-97" xlink:href="#right"></use>
-                        <use y="-136" xlink:href="#right"></use>
-                        <use y="-175" xlink:href="#right"></use>
-                        <use y="-214" xlink:href="#right"></use>
-                        <use y="-253" xlink:href="#right"></use>
-                        <use y="-292" xlink:href="#right"></use>
-                        <use y="-331" xlink:href="#right"></use>
-                        <use y="58" xlink:href="#right"></use>
-                        <use y="97" xlink:href="#right"></use>
-                        <use y="136" xlink:href="#right"></use>
-                        <use y="175" xlink:href="#right"></use>
-                        <use y="214" xlink:href="#right"></use>
-                        <use y="253" xlink:href="#right"></use>
-                        <use y="292" xlink:href="#right"></use>
-                        <use y="331" xlink:href="#right"></use>
+                        <use y="-58" xlink:href="#both"></use>
+                        <use y="-97" xlink:href="#both"></use>
+                        <use y="-136" xlink:href="#both"></use>
+                        <use y="-175" xlink:href="#both"></use>
+                        <use y="-214" xlink:href="#both"></use>
+                        <use y="-253" xlink:href="#both"></use>
+                        <use y="-292" xlink:href="#both"></use>
+                        <use y="-331" xlink:href="#both"></use>
+                        <use y="58" xlink:href="#both"></use>
+                        <use y="97" xlink:href="#both"></use>
+                        <use y="136" xlink:href="#both"></use>
+                        <use y="175" xlink:href="#both"></use>
+                        <use y="214" xlink:href="#both"></use>
+                        <use y="253" xlink:href="#both"></use>
+                        <use y="292" xlink:href="#both"></use>
+                        <use y="331" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="700"> 
                         <rect x="2" y="10"  width="100" height="290"
@@ -664,8 +660,8 @@
                         <text x="30" y="550" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="700" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-195" xlink:href="#right"></use>
-                        <use y="195" xlink:href="#right"></use>
+                        <use y="-195" xlink:href="#both"></use>
+                        <use y="195" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="700"> 
                         <rect x="2" y="10"  width="100" height="670"
@@ -675,7 +671,7 @@
                           <text x="30" y="360" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="700" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="700"> 
                         <rect x="2" y="315" rx="10"
@@ -685,10 +681,9 @@
                           stroke-width:2"></rect>
                           <text x="35" y="355" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="w" style="zoom: .7;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="w" style="zoom: .7;">
                     <h2>DDR4 SDRAM x8 (Запись)</h2>
                     <svg width="470" height="340" style="position: absolute; top: 90px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
@@ -859,11 +854,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="355" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
-                </div>
+                </div>-->
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr42" data-op="r" style="zoom: .7;">
-                    <h2>DDR4 SDRAM x4 (Чтение)</h2>
+                    <h2>DDR4 SDRAM (x4)</h2>
                     <svg width="470" height="180" style="position: absolute; top: 90px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
                     <svg width="470" height="180" style="position: absolute; top: 285px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
@@ -986,22 +980,22 @@
                           <text x="60" y="726" font-size="20" fill="#333340">Memory Array</text>
                     </svg>
                     <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-43" xlink:href="#right"></use>
-                        <use y="-82" xlink:href="#right"></use>
-                        <use y="-121" xlink:href="#right"></use>
-                        <use y="-160" xlink:href="#right"></use>
-                        <use y="-238" xlink:href="#right"></use>
-                        <use y="-277" xlink:href="#right"></use>
-                        <use y="-316" xlink:href="#right"></use>
-                        <use y="-355" xlink:href="#right"></use>
-                        <use y="33" xlink:href="#right"></use>
-                        <use y="72" xlink:href="#right"></use>
-                        <use y="111" xlink:href="#right"></use>
-                        <use y="150" xlink:href="#right"></use>
-                        <use y="228" xlink:href="#right"></use>
-                        <use y="267" xlink:href="#right"></use>
-                        <use y="306" xlink:href="#right"></use>
-                        <use y="345" xlink:href="#right"></use>
+                        <use y="-43" xlink:href="#both"></use>
+                        <use y="-82" xlink:href="#both"></use>
+                        <use y="-121" xlink:href="#both"></use>
+                        <use y="-160" xlink:href="#both"></use>
+                        <use y="-238" xlink:href="#both"></use>
+                        <use y="-277" xlink:href="#both"></use>
+                        <use y="-316" xlink:href="#both"></use>
+                        <use y="-355" xlink:href="#both"></use>
+                        <use y="33" xlink:href="#both"></use>
+                        <use y="72" xlink:href="#both"></use>
+                        <use y="111" xlink:href="#both"></use>
+                        <use y="150" xlink:href="#both"></use>
+                        <use y="228" xlink:href="#both"></use>
+                        <use y="267" xlink:href="#both"></use>
+                        <use y="306" xlink:href="#both"></use>
+                        <use y="345" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="750"> 
                         <rect x="2" y="10"  width="100" height="135"
@@ -1026,10 +1020,10 @@
                         <text x="30" y="675" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                        <use y="-295" xlink:href="#right"></use>
-                        <use y="-95" xlink:href="#right"></use>
-                        <use y="95" xlink:href="#right"></use>
-                        <use y="295" xlink:href="#right"></use>
+                        <use y="-295" xlink:href="#both"></use>
+                        <use y="-95" xlink:href="#both"></use>
+                        <use y="95" xlink:href="#both"></use>
+                        <use y="295" xlink:href="#both"></use>
                     </svg>
                     <svg width="104" height="750"> 
                         <rect x="2" y="35"  width="100" height="670"
@@ -1039,7 +1033,7 @@
                           <text x="30" y="385" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="750"> 
                         <rect x="2" y="340" rx="10"
@@ -1049,10 +1043,9 @@
                           stroke-width:2"></rect>
                           <text x="35" y="380" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr42" data-op="w" style="zoom: .7;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="ddr42" data-op="w" style="zoom: .7;">
                     <h2>DDR4 SDRAM x4 (Запись)</h2>
                     <svg width="470" height="180" style="position: absolute; top: 90px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
@@ -1239,11 +1232,10 @@
                           stroke-width:2"></rect>
                           <text x="35" y="380" font-size="20" fill="#333340">Input/Output Buffers</text>
                     </svg>
-                    
-                </div>
+                </div>-->
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr5" data-op="r" style="zoom: .5;">
-                    <h2>DDR5 SDRAM (Чтение)</h2>
+                    <h2>DDR5 SDRAM</h2>
                     <svg width="104" height="1550" style="position: absolute; top: 90px; left: 493px;"> 
                         <rect x="2" y="35"  width="100" height="1450"
                           style="fill:#FFE5CC; 
@@ -1252,7 +1244,7 @@
                           <text x="30" y="780" font-size="20" fill="#333340">MUX</text>
                     </svg>
                     <svg class="icon" height="1550" style="position: absolute; left: 602px; margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#right"></use>
+                        <use xlink:href="#both"></use>
                     </svg>
                     <svg width="254" height="1550" style="position: absolute; left: 664px;"> 
                         <rect x="2" y="740" rx="10"
@@ -1385,22 +1377,22 @@
                               <text x="60" y="726" font-size="20" fill="#333340">Memory Array</text>
                         </svg>
                         <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                            <use y="-43" xlink:href="#right"></use>
-                            <use y="-82" xlink:href="#right"></use>
-                            <use y="-121" xlink:href="#right"></use>
-                            <use y="-160" xlink:href="#right"></use>
-                            <use y="-238" xlink:href="#right"></use>
-                            <use y="-277" xlink:href="#right"></use>
-                            <use y="-316" xlink:href="#right"></use>
-                            <use y="-355" xlink:href="#right"></use>
-                            <use y="33" xlink:href="#right"></use>
-                            <use y="72" xlink:href="#right"></use>
-                            <use y="111" xlink:href="#right"></use>
-                            <use y="150" xlink:href="#right"></use>
-                            <use y="228" xlink:href="#right"></use>
-                            <use y="267" xlink:href="#right"></use>
-                            <use y="306" xlink:href="#right"></use>
-                            <use y="345" xlink:href="#right"></use>
+                            <use y="-43" xlink:href="#both"></use>
+                            <use y="-82" xlink:href="#both"></use>
+                            <use y="-121" xlink:href="#both"></use>
+                            <use y="-160" xlink:href="#both"></use>
+                            <use y="-238" xlink:href="#both"></use>
+                            <use y="-277" xlink:href="#both"></use>
+                            <use y="-316" xlink:href="#both"></use>
+                            <use y="-355" xlink:href="#both"></use>
+                            <use y="33" xlink:href="#both"></use>
+                            <use y="72" xlink:href="#both"></use>
+                            <use y="111" xlink:href="#both"></use>
+                            <use y="150" xlink:href="#both"></use>
+                            <use y="228" xlink:href="#both"></use>
+                            <use y="267" xlink:href="#both"></use>
+                            <use y="306" xlink:href="#both"></use>
+                            <use y="345" xlink:href="#both"></use>
                         </svg>
                         <svg width="104" height="750"> 
                             <rect x="2" y="10"  width="100" height="135"
@@ -1425,10 +1417,10 @@
                             <text x="30" y="675" font-size="20" fill="#333340">MUX</text>
                         </svg>
                         <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                            <use y="-295" xlink:href="#right"></use>
-                            <use y="-95" xlink:href="#right"></use>
-                            <use y="95" xlink:href="#right"></use>
-                            <use y="295" xlink:href="#right"></use>
+                            <use y="-295" xlink:href="#both"></use>
+                            <use y="-95" xlink:href="#both"></use>
+                            <use y="95" xlink:href="#both"></use>
+                            <use y="295" xlink:href="#both"></use>
                         </svg>
                         <svg width="104" height="750" style="opacity: 0;"> 
                             <rect x="2" y="35"  width="100" height="670"
@@ -1438,7 +1430,7 @@
                               <text x="30" y="385" font-size="20" fill="#333340">MUX</text>
                         </svg>
                         <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px; opacity: 0;">
-                            <use xlink:href="#right"></use>
+                            <use xlink:href="#both"></use>
                         </svg>
                         <svg width="254" height="750" style="opacity: 0;"> 
                             <rect x="2" y="340" rx="10"
@@ -1572,22 +1564,22 @@
                               <text x="60" y="726" font-size="20" fill="#333340">Memory Array</text>
                         </svg>
                         <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                            <use y="-43" xlink:href="#right"></use>
-                            <use y="-82" xlink:href="#right"></use>
-                            <use y="-121" xlink:href="#right"></use>
-                            <use y="-160" xlink:href="#right"></use>
-                            <use y="-238" xlink:href="#right"></use>
-                            <use y="-277" xlink:href="#right"></use>
-                            <use y="-316" xlink:href="#right"></use>
-                            <use y="-355" xlink:href="#right"></use>
-                            <use y="33" xlink:href="#right"></use>
-                            <use y="72" xlink:href="#right"></use>
-                            <use y="111" xlink:href="#right"></use>
-                            <use y="150" xlink:href="#right"></use>
-                            <use y="228" xlink:href="#right"></use>
-                            <use y="267" xlink:href="#right"></use>
-                            <use y="306" xlink:href="#right"></use>
-                            <use y="345" xlink:href="#right"></use>
+                            <use y="-43" xlink:href="#both"></use>
+                            <use y="-82" xlink:href="#both"></use>
+                            <use y="-121" xlink:href="#both"></use>
+                            <use y="-160" xlink:href="#both"></use>
+                            <use y="-238" xlink:href="#both"></use>
+                            <use y="-277" xlink:href="#both"></use>
+                            <use y="-316" xlink:href="#both"></use>
+                            <use y="-355" xlink:href="#both"></use>
+                            <use y="33" xlink:href="#both"></use>
+                            <use y="72" xlink:href="#both"></use>
+                            <use y="111" xlink:href="#both"></use>
+                            <use y="150" xlink:href="#both"></use>
+                            <use y="228" xlink:href="#both"></use>
+                            <use y="267" xlink:href="#both"></use>
+                            <use y="306" xlink:href="#both"></use>
+                            <use y="345" xlink:href="#both"></use>
                         </svg>
                         <svg width="104" height="750"> 
                             <rect x="2" y="10"  width="100" height="135"
@@ -1612,16 +1604,15 @@
                             <text x="30" y="675" font-size="20" fill="#333340">MUX</text>
                         </svg>
                         <svg class="icon" height="750" style="margin-left: -6px; margin-right: -6px;">
-                            <use y="-295" xlink:href="#right"></use>
-                            <use y="-95" xlink:href="#right"></use>
-                            <use y="95" xlink:href="#right"></use>
-                            <use y="295" xlink:href="#right"></use>
+                            <use y="-295" xlink:href="#both"></use>
+                            <use y="-95" xlink:href="#both"></use>
+                            <use y="95" xlink:href="#both"></use>
+                            <use y="295" xlink:href="#both"></use>
                         </svg>
                     </div>
-                    
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr5" data-op="w" style="zoom: .5;">
+                <!--<div class="row tm-margin-t-mid ram hidden" data-module="ddr5" data-op="w" style="zoom: .5;">
                     <h2>DDR5 SDRAM (Запись)</h2>
                     <svg width="104" height="1550" style="position: absolute; top: 90px; left: 493px;"> 
                         <rect x="2" y="35"  width="100" height="1450"
@@ -1997,8 +1988,7 @@
                             <use y="295" xlink:href="#left"></use>
                         </svg>
                     </div>
-                    
-                </div>
+                </div>-->
 
                 <div style="margin: 50px auto; width: 700px; ">
                     <button class="btn btn-warning" id="button1" style="display: block; margin-left: auto; margin-right: auto">Запуск</button>
@@ -2010,7 +2000,6 @@
         
         <footer class="tm-footer">
             <div class="container-fluid">
-
                 <div class="row">
                     <div class="col-xs-12 tm-copyright-col">
                         <p class="tm-copyright-text">Copyright 2022</p>
