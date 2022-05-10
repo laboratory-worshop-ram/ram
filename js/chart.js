@@ -94,6 +94,14 @@ const data = {
       backgroundColor: purpul,
       pointRadius: 0,
     },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, -1, -1, 0, 0, -1, -1, 0, 0, -1, -1, 0, 0, -1, -1, 0, 0, -1, -1,
+       0, 0, -1, -1, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: purpul,
+      backgroundColor: transparent,
+      pointRadius: 0,
+    },
     
   ]
 };
@@ -140,21 +148,50 @@ const data1 = {
     {
       label: 'Line 2 (n bit)',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
-      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      borderColor: yellow,
-      backgroundColor: yellow,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 
+      1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: orange,
       pointRadius: 0,
       yAxisID: 'y6',
     },
     {
       label: 'Data (2n bit)',
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0,
-       1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0,],
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 
+      1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       borderColor: purpul,
       backgroundColor: purpul,
       pointRadius: 0,
     },
-    
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y5',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, 
+      -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y6',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, 
+      -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: purpul,
+      backgroundColor: transparent,
+      pointRadius: 0,
+    },
   ]
 };
 
@@ -218,7 +255,8 @@ const data2 = {
     {
       label: 'Line 4 (n bit)',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
-      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       borderColor: orange,
       backgroundColor: orange,
       pointRadius: 0,
@@ -226,13 +264,59 @@ const data2 = {
     },
     {
       label: 'Data (4n bit)',
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0,
-       1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0,],
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0,
+      1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       borderColor: purpul,
       backgroundColor: purpul,
       pointRadius: 0,
     },
-    
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y5',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y6',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y7',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: orange,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y8',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0,
+      -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0, -1, -1, -1, 
+      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: purpul,
+      backgroundColor: transparent,
+      pointRadius: 0,
+    },
   ]
 };
 
@@ -240,6 +324,12 @@ let delayed;
 const customLegend = {
   id: 'customLegend',
   afterDraw: (chart, args, pluginOptions) => {
+    chart.legend.legendItems.forEach(element => {
+      if (element.text === '') {
+        element.hidden = true;
+        element.strokeStyle = transparent;
+      }
+    })
     const { ctx, data, chartArea: {left, right, top, bottom, width, height}, scales: {x,y}} = chart;
     ctx.save();
     data.datasets.forEach((dataset, index) => {
@@ -293,7 +383,10 @@ const config = {
         stackWeight: 1,
         grid: {
           borderColor: purpul
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y4: {
         type: 'linear',
@@ -303,7 +396,10 @@ const config = {
         stackWeight: 1,
         grid: {
           borderColor: blue
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y3: {
         type: 'linear',
@@ -313,7 +409,10 @@ const config = {
         stackWeight: 1,
         grid: {
           borderColor: green
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y2: {
         type: 'linear',
@@ -323,7 +422,10 @@ const config = {
         stackWeight: 1,
         grid: {
           borderColor: red
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
     }
   },
@@ -334,19 +436,6 @@ const config1 = {
   type: 'line',
   data: data1,
   options: {
-    /*animation: {
-      onComplete: () => {
-        delayed = true;
-      },
-      delay: (context) => {
-        let delay = 0;
-        if (context.type === 'data' && context.mode === 'default' && !delayed) {
-          delay = context.dataIndex * 250 ;
-          context.dataset.borderColor = red;
-        }
-        return delay;
-      },
-    },*/
     animation,
     interaction: {
       intersect: false
@@ -364,30 +453,39 @@ const config1 = {
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: purpul
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y6: {
         type: 'linear',
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
-          borderColor: yellow
-        }
+          borderColor: orange
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y5: {
         type: 'linear',
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: orange
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y4: {
         type: 'linear',
@@ -397,7 +495,10 @@ const config1 = {
         stackWeight: 1,
         grid: {
           borderColor: blue
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y3: {
         type: 'linear',
@@ -407,7 +508,10 @@ const config1 = {
         stackWeight: 1,
         grid: {
           borderColor: green
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y2: {
         type: 'linear',
@@ -417,7 +521,10 @@ const config1 = {
         stackWeight: 1,
         grid: {
           borderColor: red
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
     }
   },
@@ -428,19 +535,6 @@ const config2 = {
   type: 'line',
   data: data2,
   options: {
-    /*animation: {
-      onComplete: () => {
-        delayed = true;
-      },
-      delay: (context) => {
-        let delay = 0;
-        if (context.type === 'data' && context.mode === 'default' && !delayed) {
-          delay = context.dataIndex * 250 ;
-          context.dataset.borderColor = red;
-        }
-        return delay;
-      },
-    },*/
     animation,
     interaction: {
       intersect: false
@@ -458,50 +552,65 @@ const config2 = {
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: purpul
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
        y8: {
         type: 'linear',
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: orange
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y7: {
         type: 'linear',
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: orange
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y6: {
         type: 'linear',
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: orange
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y5: {
         type: 'linear',
         offset: true,
         position: 'left',
         stack: 'demo',
-        stackWeight: 1,
+        stackWeight: 2,
         grid: {
           borderColor: orange
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y4: {
         type: 'linear',
@@ -511,7 +620,10 @@ const config2 = {
         stackWeight: 1,
         grid: {
           borderColor: blue
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y3: {
         type: 'linear',
@@ -521,7 +633,10 @@ const config2 = {
         stackWeight: 1,
         grid: {
           borderColor: green
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
       y2: {
         type: 'linear',
@@ -531,7 +646,10 @@ const config2 = {
         stackWeight: 1,
         grid: {
           borderColor: red
-        }
+        },
+        ticks: {
+          color: transparent,
+        },
       },
     }
   },
