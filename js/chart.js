@@ -21,7 +21,7 @@ const labels1 = [
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
   ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' ];
 
-// <block:animation:1>
+//animation
 const totalDuration = 5000;
 const delayBetweenPoints = totalDuration / labels1.length;
 const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
@@ -30,7 +30,7 @@ const animation = {
     type: 'number',
     easing: 'linear',
     duration: delayBetweenPoints,
-    from: NaN, // the point is initially skipped
+    from: NaN,
     delay(ctx) {
       if (ctx.type !== 'data' || ctx.xStarted) {
         return 0;
@@ -53,7 +53,6 @@ const animation = {
     }
   }
 };
-// </block:animation>
 
 const data = {
   labels: labels,
@@ -324,6 +323,7 @@ const data2 = {
 };
 
 let delayed;
+
 const customLegend = {
   id: 'customLegend',
   afterDraw: (chart, args, pluginOptions) => {

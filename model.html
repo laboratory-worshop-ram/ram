@@ -29,6 +29,12 @@
             <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 38" id="right">
                 <path d="M127.768 20.7678C128.744 19.7915 128.744 18.2085 127.768 17.2322L111.858 1.32233C110.882 0.34602 109.299 0.34602 108.322 1.32233C107.346 2.29864 107.346 3.88155 108.322 4.85786L122.464 19L108.322 33.1421C107.346 34.1184 107.346 35.7014 108.322 36.6777C109.299 37.654 110.882 37.654 111.858 36.6777L127.768 20.7678ZM0 21.5H126V16.5H0V21.5Z" fill="black"></path>
             </symbol>
+             <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 38" id="right2">
+                <path d="M127.768 20.7678C128.744 19.7915 128.744 18.2085 127.768 17.2322L111.858 1.32233C110.882 0.34602 109.299 0.34602 108.322 1.32233C107.346 2.29864 107.346 3.88155 108.322 4.85786L122.464 19L108.322 33.1421C107.346 34.1184 107.346 35.7014 108.322 36.6777C109.299 37.654 110.882 37.654 111.858 36.6777L127.768 20.7678ZM0 21.5H126V16.5H0V21.5Z" ></path>
+            </symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="up">
+                <path d="M10 2.5L16.5 9H13v8H7V9H3.5L10 2.5z"></path>
+            </symbol>
         </svg>
        
         <div class="tm-header">
@@ -113,15 +119,105 @@
                     </svg>
                 </div>
 
-                <!--<div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w" style="zoom: .9;">
-                    <h2>SDR SDRAM (Запись)</h2>
-                    <svg width="254" height="74"> 
-                        <rect x="2" y="2" rx="10"
-                          ry="10" width="250" height="70"
+                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w" style="position: relative;">
+                    <h2>RAM</h2>
+                    <svg width="100" height="600" style="">
+                        <rect x="0" y="0"
+                          width="20" height="400"
+                          style="fill:rgb(255, 99, 132);">
+                        </rect>
+                        <text x="-250" y="15" font-size="16" fill="#fff" transform="rotate(-90)">Command Bus</text>
+                    </svg>
+                    <svg width="400" height="600" style="position: absolute; top: 0; left: 0;">
+                        <rect x="18" y="415"
+                          width="280" height="2"
+                          style="fill:rgb(255, 99, 132);"></rect>
+                        <use xlink:href="#right2" x="75" y="408.5" height="15" style="fill: rgb(255, 99, 132);"></use>
+                        <rect x="18" y="385"
+                          width="250" height="2"
+                          style="fill:rgb(255, 99, 132);"></rect>
+                        <use xlink:href="#right2" x="45" y="378.5" height="15" style="fill: rgb(255, 99, 132);"></use>
+                        <rect x="18" y="355"
+                          width="200" height="2"
+                          style="fill:rgb(255, 99, 132);"></rect>
+                        <use xlink:href="#right2" x="15" y="348.5" height="15" style="fill: rgb(255, 99, 132);"></use>
+                        <rect x="18" y="325"
+                          width="180" height="2"
+                          style="fill:rgb(255, 99, 132);"></rect>
+                        <use xlink:href="#right2" x="-15" y="318.5" height="15" style="fill: rgb(255, 99, 132);"></use>
+                    </svg>
+                    <svg width="100" height="600" style="">
+                        <rect x="0" y="0"
+                          width="20" height="400"
+                          style="fill:rgb(255, 159, 64);">
+                        </rect>
+                        <text x="-250" y="15" font-size="16" fill="#fff" transform="rotate(-90)">Address Bus</text>
+                    </svg>
+                    <svg width="400" height="600" style="position: absolute; top: 0; left: 100;">
+                        <rect x="21" y="305"
+                          width="180" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="-13" y="298.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="275"
+                          width="150" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="-43" y="268.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="245"
+                          width="120" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="-73" y="238.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="215"
+                          width="90" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="-103" y="208.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="200"
+                          width="250" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="65" y="193.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="170"
+                          width="220" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="35" y="163.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="140"
+                          width="190" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="5" y="133.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                        <rect x="21" y="110"
+                          width="160" height="2"
+                          style="fill:rgb(255, 159, 64);"></rect>
+                        <use xlink:href="#right2" x="-25" y="103.5" height="15" style="fill: rgb(255, 159, 64);"></use>
+                    </svg>
+                    <svg width="1000" height="600" style=""> 
+                        <rect x="2" y="2"
+                          width="250" height="250"
+                          style="fill:#CCCCFF; 
+                          stroke:#4D4D60;
+                          stroke-width:2">
+                        </rect>
+                        <image x="2" y="2" width="250" height="250" xlink:href="img/bank.png" />
+                        <rect x="32" y="32"
+                          width="250" height="250"
+                          style="fill:#CCCCFF; 
+                          stroke:#4D4D60;
+                          stroke-width:2">
+                        </rect>
+                        <image x="32" y="32" width="250" height="250" xlink:href="img/bank.png" />
+                        <rect x="62" y="62"
+                          width="250" height="250"
                           style="fill:#CCCCFF; 
                           stroke:#4D4D60;
                           stroke-width:2"></rect>
-                          <text x="60" y="45" font-size="20" fill="#333340">Memory Array</text>
+                        <image x="62" y="62" width="250" height="250" xlink:href="img/bank.png" />
+                        <rect x="92" y="92"
+                          width="250" height="250"
+                          style="fill:#CCCCFF; 
+                          stroke:#4D4D60;
+                          stroke-width:2;">
+                        </rect>
+                        <image x="92" y="92" width="250" height="250" xlink:href="img/bank.png" />
+                    </svg>
+                    <!--<svg class="icon" x="62" y="62" style="fill: rgb(255, 99, 132); position:absolute;">
+                        <use xlink:href="#up"></use>
                     </svg>
                     <svg class="icon" height="74" style="margin-left: -6px; margin-right: -6px;">
                         <use xlink:href="#left"></use>
@@ -133,8 +229,8 @@
                           stroke:#4D4D60;
                           stroke-width:2"></rect>
                           <text x="35" y="45" font-size="20" fill="#333340">Input/Output Buffers</text>
-                    </svg>
-                </div>-->
+                    </svg>-->
+                </div>
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r" style="zoom: .7;">
                     <h2>DDR SDRAM</h2>

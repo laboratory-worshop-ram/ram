@@ -92,7 +92,7 @@ h2 { font-size: 2.2rem; }
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 800px;
+	height: 500px;
 }
 
 .tm-about-img-container { background-image: url('../img/tm-about-img.jpg');	}
