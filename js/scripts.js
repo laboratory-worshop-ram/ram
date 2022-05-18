@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnWarning = document.querySelector('.btn-warning');
     const varItems = document.querySelectorAll('.vari');
 
+    const btnRandom = document.querySelector('#random');
+    const bankGroup = document.querySelector('.bankGroup');
+    const bankItems = document.querySelectorAll('.bank');
+
     for (const item of dropdownItem1) {
         item.addEventListener('click', () => {
             dropdownItem1.forEach(item1 => {
@@ -72,6 +76,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
         }
+    })
+
+    btnRandom.addEventListener('click', () => {
+        var svgNS = bankGroup.namespaceURI;
+        var newCell;
+        var width = bankItems[0].width.baseVal.value/8;
+
+        for (let bank of bankItems) {
+            let arr = new Array();
+            for (let i=0; i < 8; i++) {
+              arr[i] = new Array();
+              for (let j=0; j < 8; j++){
+                arr[i][j]=Math.floor(Math.random()*2);
+                newCell = document.createElementNS(svgNS,'rect');
+                newCell.setAttribute('x', bank.x.baseVal.value+i*width);
+                newCell.setAttribute('y', bank.y.baseVal.value+j*width);
+                newCell.setAttribute('width', width);
+                newCell.setAttribute('height', width);
+                newCell.style.stroke = '#4D4D60';
+                newCell.style.strokeWidth = '1';
+                if (arr[i][j] === 0) {
+                    newCell.style.fill = 'rgb(54, 162, 235)';
+                } else {
+                    newCell.style.fill = 'rgb(255, 99, 132)';
+                }
+                bankGroup.appendChild(newCell);
+              }
+            }
+        }
+
     })
 
 });
