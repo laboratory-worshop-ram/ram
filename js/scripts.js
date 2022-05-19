@@ -113,14 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    const forms = document.querySelectorAll('.needs-validation')
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-          if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
+    const form = document.querySelector('.needs-validation');
+    form.addEventListener('submit', event => {
+        if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
             var cells = document.getElementsByClassName(row.value+''+col.value);
             for (let cell of cells) {
                 cell.style.stroke = 'rgb(255, 205, 86)';
@@ -140,11 +135,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 newCell.style.fill = cells[i].style.fill;
                 bankGroup.appendChild(newCell);
             }
-          } else {
+        } else {
             alert ('Введите значение от 0 до 7!')
-          }
-          form.classList.add('was-validated')
-        }, false)
-    })
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated')
+    }, false);
+
 
 });
