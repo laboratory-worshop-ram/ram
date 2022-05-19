@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnRandom = document.querySelector('#random');
     const bankGroup = document.querySelector('.bankGroup');
     const bankItems = document.querySelectorAll('.bank');
+    const formDiv = document.querySelector('.rowcol');
+    const row = document.querySelector('#row');
+    const col = document.querySelector('#col');
+    const buffer = document.querySelector('.buffer');
 
     for (const item of dropdownItem1) {
         item.addEventListener('click', () => {
@@ -82,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var svgNS = bankGroup.namespaceURI;
         var newCell;
         var width = bankItems[0].width.baseVal.value/8;
+        formDiv.classList.remove('hidden');
 
         for (let bank of bankItems) {
             let arr = new Array();
@@ -94,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newCell.setAttribute('y', bank.y.baseVal.value+j*width);
                 newCell.setAttribute('width', width);
                 newCell.setAttribute('height', width);
+                newCell.setAttribute('class', i + '' + j);
                 newCell.style.stroke = '#4D4D60';
                 newCell.style.strokeWidth = '1';
                 if (arr[i][j] === 0) {
@@ -105,7 +111,40 @@ document.addEventListener('DOMContentLoaded', () => {
               }
             }
         }
+    })
 
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
+            var cells = document.getElementsByClassName(row.value+''+col.value);
+            for (let cell of cells) {
+                cell.style.stroke = 'rgb(255, 205, 86)';
+                cell.style.strokeWidth = '3';
+            }
+            var svgNS = bankGroup.namespaceURI;
+            var newCell;
+            var width = buffer.width.baseVal.value/8;
+            for (let i = 0; i < 8; i++) {
+                newCell = document.createElementNS(svgNS,'rect');
+                newCell.setAttribute('x', buffer.x.baseVal.value+i*width);
+                newCell.setAttribute('y', buffer.y.baseVal.value);
+                newCell.setAttribute('width', width);
+                newCell.setAttribute('height', width);
+                newCell.style.stroke = '#4D4D60';
+                newCell.style.strokeWidth = '1';
+                newCell.style.fill = cells[i].style.fill;
+                bankGroup.appendChild(newCell);
+            }
+          } else {
+            alert ('Введите значение от 0 до 7!')
+          }
+          form.classList.add('was-validated')
+        }, false)
     })
 
 });

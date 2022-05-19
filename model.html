@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Лабораторный практикум</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="stylesheet" href="css/templatemo-style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -97,7 +97,7 @@
 
             <div class="container-fluid" style="overflow: auto; display: flex; flex-wrap: wrap;">
                 
-                <div class="row tm-margin-t-mid ram" data-module="sdr" data-op="r" style="zoom: .9;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="r" style="zoom: .9;">
                     <h2>SDR SDRAM</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
@@ -121,7 +121,23 @@
                 </div>
 
                 <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w">
-                    <button class="btn random" id="random" style="display: block; margin-left: auto; margin-right: auto">Random</button>
+                    <button class="btn random" id="random" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px;">Random</button>
+                    <div class="container-fluid rowcol hidden">
+                        <form class="row g-3 needs-validation" style="margin-bottom: 30px;" novalidate>
+                            <div class="col-md-3">
+                                <h4 style="display: block; margin: auto; width: fit-content;">Введите значения:</h4>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" id="row" placeholder="Строка" required>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" id="col" placeholder="Столбец" required>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                     <div style="position: relative; zoom: .9;">
                         <h2>Bank Group</h2>
                         <svg width="100" height="650" style="">
@@ -241,27 +257,23 @@
                               stroke:#4D4D60;
                               stroke-width:2">
                             </rect>
-                            <!--<image x="2" y="2" width="250" height="250" xlink:href="img/bank.png" />-->
                             <rect class="bank" x="222" y="2"
                               width="180" height="180"
                               style="fill:#CCCCFF; 
                               stroke:#4D4D60;
                               stroke-width:2">
                             </rect>
-                            <!--<image x="32" y="32" width="250" height="250" xlink:href="img/bank.png" />-->
                             <rect class="bank" x="442" y="2"
                               width="180" height="180"
                               style="fill:#CCCCFF; 
                               stroke:#4D4D60;
                               stroke-width:2"></rect>
-                            <!--<image x="62" y="62" width="250" height="250" xlink:href="img/bank.png" />-->
                             <rect class="bank" x="662" y="2"
                               width="180" height="180"
                               style="fill:#CCCCFF; 
                               stroke:#4D4D60;
                               stroke-width:2;">
                             </rect>
-                            <!--<image x="92" y="92" width="250" height="250" xlink:href="img/bank.png" />-->
                             <rect class="bank" x="2" y="252"
                               width="180" height="180"
                               style="fill:#CCCCFF; 
@@ -287,7 +299,7 @@
                               stroke-width:2;">
                             </rect>
                             <rect class="buffer" x="882" y="282"
-                              width="200" height="150"
+                              width="180" height="22.5"
                               style="fill:#FFF; 
                               stroke:#4D4D60;
                               stroke-width:2;">
@@ -1244,8 +1256,8 @@
         <!-- load JS files -->
         <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
         <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
-        <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
-       <script src="js/scripts.js"></script>
-       <script src="js/chart.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/chart.js"></script>
 </body>
 </html>

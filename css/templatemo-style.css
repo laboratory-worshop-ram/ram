@@ -31,6 +31,10 @@ h2 { font-size: 2.2rem; }
 	overflow-x: hidden;
 }
 
+.rowcol.hidden {
+	display: none;
+}
+
 .main_title {
 	font-size: 3.5rem; 
 	font-weight: 700; 
@@ -228,9 +232,7 @@ p { line-height: 1.9; }
 .tm-aside-r { padding-left: 30px; }
 
 .form-control {
-	border-radius: 0;
 	font-size: 1.1rem;
-	padding: 0.75rem 1rem;
 }
 
 .form-control:focus { border-color: #CC9900; }
