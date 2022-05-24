@@ -409,19 +409,6 @@ const config = {
   type: 'line',
   data: data,
   options: {
-    /*animation: {
-      onComplete: () => {
-        delayed = true;
-      },
-      delay: (context) => {
-        let delay = 0;
-        if (context.type === 'data' && context.mode === 'default' && !delayed) {
-          delay = context.dataIndex * 250 ;
-          context.dataset.borderColor = red;
-        }
-        return delay;
-      },
-    },*/
     animation,
     interaction: {
       intersect: false
@@ -828,6 +815,8 @@ var chart;
         chart = new Chart(ctx, config2);
       } else if (ram.dataset.module === 'ddr5' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
+      } else if (ram.dataset.module === 'gddr' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config_2);
       }
       else if (ram.dataset.module === 'gddr' && !ram.classList.contains('hidden')) 
       {
