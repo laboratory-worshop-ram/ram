@@ -686,3 +686,11 @@ p {
 
 	flex-shrink: 0;
 }
+
+.lefting {
+	float: left;
+}
+
+.righting {
+	float: right;
+}

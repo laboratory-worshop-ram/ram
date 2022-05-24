@@ -321,6 +321,62 @@ const data2 = {
     },
   ]
 };
+const dataCount =20
+const down = (ctx, value) => ctx.p0.parsed.y > ctx.p1.parsed.y ? value : undefined;
+const up = (ctx, value) => ctx.p0.parsed.y < ctx.p1.parsed.y ? value : undefined;
+const data3 = {
+  labels: [...Array(dataCount)].map((v,i)=>""),
+  datasets: [
+    {
+      label: 'SDR',
+      data:[...Array(dataCount)].map((v,i)=>Math.max(0,Math.min(1,i%4-1))),
+      //data: [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 
+     // 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
+      // 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1],
+      borderColor: red,
+      backgroundColor: red,
+      yAxisID: 'y2',
+      segment: {
+        borderColor: ctx => up(ctx,green),
+      },
+      pointRadius: 0,
+      stepped:true,
+      pointStyle: 'circle',
+     // pointRadius: (value)=>value.parsed.y*5,
+      pointHoverRadius: 8
+    },
+    {
+      label: 'DDR',
+      data:[...Array(dataCount)].map((v,i)=>Math.max(0,Math.min(1,i%4-1))),
+      //data: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+      // 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: green,
+      backgroundColor: green,
+      pointRadius: 0,
+      segment: {
+        borderColor: ctx =>  down(ctx, purpul)||up(ctx,yellow),
+      },
+      yAxisID: 'y3',
+      stepped:true,
+
+    },
+    {
+      label: 'QDR',
+      data:[...Array(dataCount)].map((v,i)=>i%2),
+      //data: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+      //0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      borderColor: blue,
+      backgroundColor: blue,
+      pointRadius: 0,
+      segment: {
+        borderColor: ctx =>  down(ctx, purpul)||up(ctx,yellow),
+      },
+      yAxisID: 'y4',
+      stepped:true,
+    },
+  
+  ]
+};
 
 let delayed;
 
@@ -658,6 +714,96 @@ const config2 = {
   },
   plugins: [customLegend]
 };
+const config3 = {
+  type: 'line',
+  data: data3,
+  options: {
+    /*animation: {
+      onComplete: () => {
+        delayed = true;
+      },
+      delay: (context) => {
+        let delay = 0;
+        if (context.type === 'data' && context.mode === 'default' && !delayed) {
+          delay = context.dataIndex * 250 ;
+          context.dataset.borderColor = red;
+        }
+        return delay;
+      },
+    },*/
+    animation,
+    interaction: {
+      intersect: false
+    },
+    layout: {
+      padding: {
+        left: (context) => {
+          return context.chart.ctx.measureText('Address').width + 15;
+        }
+      }
+    },
+    scales: {
+      x:{
+        ticks:{
+         // stepSize:50,
+        }
+      },
+      y: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 2,
+        grid: {
+          borderColor: purpul
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y4: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: blue
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y3: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: green
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y2: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: red
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+    }
+  },
+  plugins: [customLegend]
+};
 
 const ramItems = document.querySelectorAll('.ram');
 var ctx = document.getElementById('chart');
@@ -682,6 +828,11 @@ var chart;
         chart = new Chart(ctx, config2);
       } else if (ram.dataset.module === 'ddr5' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
+      }
+      else if (ram.dataset.module === 'gddr' && !ram.classList.contains('hidden')) 
+      {
+       
+        chart = new Chart(ctx, config3);
       }
     }
   });
