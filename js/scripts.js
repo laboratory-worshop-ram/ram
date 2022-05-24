@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             ram.classList.add('hidden');
                         } else if (item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
                             ram.classList.remove('hidden');
-                        }
-                        if (item2.classList.contains('active') && item2.dataset.op === 'w') {
-                            chartBox.classList.add('hidden')
-                        } else {
-                            chartBox.classList.remove('hidden')
+                            if (item2.dataset.op !== 'r') {
+                                chartBox.classList.add('hidden');
+                            } else {
+                                chartBox.classList.remove('hidden');
+                            }
                         }
                     })
                 }
