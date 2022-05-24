@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const row = document.querySelector('#row');
     const col = document.querySelector('#col');
     const buffer = document.querySelector('.buffer');
+    const chartBox = document.querySelector('.chartBox');
 
     for (const item of dropdownItem1) {
         item.addEventListener('click', () => {
@@ -65,6 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else if (item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
                             ram.classList.remove('hidden');
                         }
+                        if (item2.classList.contains('active') && item2.dataset.op === 'w') {
+                            chartBox.classList.add('hidden')
+                        } else {
+                            chartBox.classList.remove('hidden')
+                        }
                     })
                 }
             })
@@ -83,58 +89,97 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     btnRandom.addEventListener('click', () => {
-        var svgNS = bankGroup.namespaceURI;
-        var newCell;
-        var width = bankItems[0].width.baseVal.value/8;
-        formDiv.classList.remove('hidden');
+        let arr;
+        if (bankGroup.classList.contains('empty')) {
+            bankGroup.classList.remove('empty');
+            var svgNS = bankGroup.namespaceURI;
+            var newCell;
+            var width = bankItems[0].width.baseVal.value/8;
+            formDiv.classList.remove('hidden');
 
-        for (let bank of bankItems) {
-            let arr = new Array();
-            for (let i=0; i < 8; i++) {
-              arr[i] = new Array();
-              for (let j=0; j < 8; j++){
-                arr[i][j]=Math.floor(Math.random()*2);
-                newCell = document.createElementNS(svgNS,'rect');
-                newCell.setAttribute('x', bank.x.baseVal.value+i*width);
-                newCell.setAttribute('y', bank.y.baseVal.value+j*width);
-                newCell.setAttribute('width', width);
-                newCell.setAttribute('height', width);
-                newCell.setAttribute('class', i + '' + j);
-                newCell.style.stroke = '#4D4D60';
-                newCell.style.strokeWidth = '1';
-                if (arr[i][j] === 0) {
-                    newCell.style.fill = 'rgb(54, 162, 235)';
-                } else {
-                    newCell.style.fill = 'rgb(255, 99, 132)';
+            for (let x=0; x<8; x++) {
+                arr = new Array();
+                for (let i=0; i < 8; i++) {
+                  arr[i] = new Array();
+                  for (let j=0; j < 8; j++){
+                    arr[i][j]=Math.floor(Math.random()*2);
+                    newCell = document.createElementNS(svgNS,'rect');
+                    newCell.setAttribute('x', bankItems[x].x.baseVal.value+i*width);
+                    newCell.setAttribute('y', bankItems[x].y.baseVal.value+j*width);
+                    newCell.setAttribute('width', width);
+                    newCell.setAttribute('height', width);
+                    newCell.setAttribute('class', 'cell ' + x + '' + i + '' + j);
+                    newCell.style.stroke = '#4D4D60';
+                    newCell.style.strokeWidth = '1';
+                    if (arr[i][j] === 0) {
+                        newCell.style.fill = '#37B6CE';
+                    } else {
+                        newCell.style.fill = '#FE7276';
+                    }
+                    bankGroup.appendChild(newCell);
+                  }
                 }
-                bankGroup.appendChild(newCell);
-              }
+            }
+        } else {
+            var cell;
+            for (let x=0; x<8; x++) {
+                arr = new Array();
+                for (let i=0; i < 8; i++) {
+                  arr[i] = new Array();
+                  for (let j=0; j < 8; j++){
+                    arr[i][j]=Math.floor(Math.random()*2);
+                    cell = document.getElementsByClassName('cell ' + x + '' + i + '' + j)[0];
+                    if (arr[i][j] === 0) {
+                        cell.style.fill = '#37B6CE';
+                    } else {
+                        cell.style.fill = '#FE7276';
+                    }
+                  }
+                }
             }
         }
     })
 
     const form = document.querySelector('.needs-validation');
     form.addEventListener('submit', event => {
+        var cell;
+        var cells = [];
         if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
-            var cells = document.getElementsByClassName(row.value+''+col.value);
-            for (let cell of cells) {
+            for (let item of document.getElementsByClassName('cell')) {
+                item.style.stroke = '#4D4D60';
+                item.style.strokeWidth = '1';
+            }
+            for (let i = 0; i < 8; i++) {
+                cell = document.getElementsByClassName('cell ' + i + '' + row.value + '' + col.value)[0];
                 cell.style.stroke = 'rgb(255, 205, 86)';
                 cell.style.strokeWidth = '3';
+                cells.push(cell);
             }
             var svgNS = bankGroup.namespaceURI;
             var newCell;
             var width = buffer.width.baseVal.value/8;
-            for (let i = 0; i < 8; i++) {
-                newCell = document.createElementNS(svgNS,'rect');
-                newCell.setAttribute('x', buffer.x.baseVal.value+i*width);
-                newCell.setAttribute('y', buffer.y.baseVal.value);
-                newCell.setAttribute('width', width);
-                newCell.setAttribute('height', width);
-                newCell.style.stroke = '#4D4D60';
-                newCell.style.strokeWidth = '1';
-                newCell.style.fill = cells[i].style.fill;
-                bankGroup.appendChild(newCell);
+            if (buffer.classList.contains('empty')) {
+                buffer.classList.remove('empty');
+                for (let i = 0; i < 8; i++) {
+                    newCell = document.createElementNS(svgNS,'rect');
+                    newCell.setAttribute('x', buffer.x.baseVal.value+i*width);
+                    newCell.setAttribute('y', buffer.y.baseVal.value);
+                    newCell.setAttribute('width', width);
+                    newCell.setAttribute('height', width);
+                    newCell.setAttribute('class', 'bufferCell');
+                    newCell.style.stroke = '#4D4D60';
+                    newCell.style.strokeWidth = '1';
+                    newCell.style.fill = cells[i].style.fill;
+                    bankGroup.appendChild(newCell);
+                }
+            } else {
+                var bufferCell;
+                for (let i = 0; i < 8; i++) {
+                    bufferCell = document.getElementsByClassName('bufferCell')[i];
+                    bufferCell.style.fill = cells[i].style.fill;
+                }
             }
+            
         } else {
             alert ('Введите значение от 0 до 7!')
         }
@@ -143,5 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
         form.classList.add('was-validated')
     }, false);
 
+    const groupItems = document.querySelectorAll('.group');
+    const detailed = document.querySelector('.detailed');
+    for (let item of groupItems) {
+        item.addEventListener('click', () => {
+            detailed.classList.remove('hidden');
+        })
+    }
 
 });

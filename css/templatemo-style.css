@@ -44,6 +44,18 @@ h2 {
 	display: none;
 }
 
+.detailed.hidden {
+	display: none;
+}
+
+.group:hover {
+	cursor: pointer;
+}
+
+.chartBox.hidden {
+	display: none;
+}
+
 .main_title {
 	font-size: 3.5rem;
 	font-weight: 700;
