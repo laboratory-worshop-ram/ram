@@ -196,4 +196,20 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    const detailform = document.querySelector('.detailform');
+    const detailcells = document.querySelectorAll('.detailcell');
+    detailform.addEventListener('submit', event => {
+        if (bits.checkValidity()) {
+            for (let i=0; i < 16; i++) {
+                if (bits.value[i] === '1') {
+                    detailcells[i].setAttribute('href', 'img/onecell.png');
+                }
+            }
+        } else {
+            alert ('Введите бинарную строку длиной 16 бит!')
+        }
+        event.preventDefault();
+        event.stopPropagation();
+    }, false);
+
 });
