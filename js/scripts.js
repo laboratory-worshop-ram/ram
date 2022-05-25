@@ -11,9 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownMenuButton2 = document.querySelector('#dropdownMenuButton2');
 
     const btnRandom = document.querySelector('#random');
+    const btnRandom1 = document.querySelector('#random1');
     const bankGroup = document.querySelector('.bankGroup');
+    const bankGroup1 = document.querySelector('.bankGroup1');
     const bankItems = document.querySelectorAll('.bank');
+    const bankItems1 = document.querySelectorAll('.bank1');
     const formDiv = document.querySelector('.rowcol');
+    const formDiv1 = document.querySelector('.rowcol1');
     const row = document.querySelector('#row');
     const col = document.querySelector('#col');
     const buffer = document.querySelector('.buffer');
@@ -92,32 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         }
 
-        /*if (item2.dataset.op !== 'o') {
-                        dropdown1.classList.add('hidden');
-                    }
-
-        for (const ram of ramItems) {
-            ram.classList.add('hidden');
-            dropdownItem1.forEach(item1 => {
-                if (!item1.classList.contains('active') && (ram.dataset.module === item1.dataset.module)) {
-                    ram.classList.add('hidden');
-                } else if (item1.classList.contains('active') && (ram.dataset.module === item1.dataset.module)) {
-                    dropdownItem2.forEach(item2 => {
-                        if (!item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
-                            ram.classList.add('hidden');
-                        } else if (item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
-                            ram.classList.remove('hidden');
-                            if (item2.dataset.op !== 'r') {
-                                chartBox.classList.add('hidden');
-                            } else {
-                                chartBox.classList.remove('hidden');
-                            }
-                        }
-                    })
-                }
-            })
-        }*/
-
         for (const vari of varItems) {
             vari.classList.add('hidden');
             dropdownItem3.forEach(item3 => {
@@ -182,7 +160,107 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    btnRandom1.addEventListener('click', () => {
+        let arr;
+        if (bankGroup1.classList.contains('empty')) {
+            bankGroup1.classList.remove('empty');
+            var svgNS = bankGroup1.namespaceURI;
+            var newCell;
+            var width = bankItems1[0].width.baseVal.value/8;
+            formDiv1.classList.remove('hidden');
+
+            for (let x=0; x<8; x++) {
+                arr = new Array();
+                for (let i=0; i < 8; i++) {
+                  arr[i] = new Array();
+                  for (let j=0; j < 8; j++){
+                    arr[i][j]=Math.floor(Math.random()*2);
+                    newCell = document.createElementNS(svgNS,'rect');
+                    newCell.setAttribute('x', bankItems1[x].x.baseVal.value+i*width);
+                    newCell.setAttribute('y', bankItems1[x].y.baseVal.value+j*width);
+                    newCell.setAttribute('width', width);
+                    newCell.setAttribute('height', width);
+                    newCell.setAttribute('class', 'cell ' + x + '' + i + '' + j);
+                    newCell.style.stroke = '#4D4D60';
+                    newCell.style.strokeWidth = '1';
+                    if (arr[i][j] === 0) {
+                        newCell.style.fill = '#FFF';
+                    } else {
+                        newCell.style.fill = '#FE7276';
+                    }
+                    bankGroup1.appendChild(newCell);
+                  }
+                }
+            }
+        } else {
+            var cell;
+            for (let x=0; x<8; x++) {
+                arr = new Array();
+                for (let i=0; i < 8; i++) {
+                  arr[i] = new Array();
+                  for (let j=0; j < 8; j++){
+                    arr[i][j]=Math.floor(Math.random()*2);
+                    cell = document.getElementsByClassName('cell ' + x + '' + i + '' + j)[0];
+                    if (arr[i][j] === 0) {
+                        cell.style.fill = '#FFF';
+                    } else {
+                        cell.style.fill = '#FE7276';
+                    }
+                  }
+                }
+            }
+        }
+    })
+
     const form = document.querySelector('.needs-validation');
+    const form1 = document.querySelector('.needs-validation1');
+    form.addEventListener('submit', event => {
+        var cell;
+        var cells = [];
+        if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
+            for (let item of document.getElementsByClassName('cell')) {
+                item.style.stroke = '#4D4D60';
+                item.style.strokeWidth = '1';
+            }
+            for (let i = 0; i < 8; i++) {
+                cell = document.getElementsByClassName('cell ' + i + '' + row.value + '' + col.value)[0];
+                cell.style.stroke = 'rgb(255, 205, 86)';
+                cell.style.strokeWidth = '3';
+                cells.push(cell);
+            }
+            var svgNS = bankGroup.namespaceURI;
+            var newCell;
+            var width = buffer.width.baseVal.value/8;
+            if (buffer.classList.contains('empty')) {
+                buffer.classList.remove('empty');
+                for (let i = 0; i < 8; i++) {
+                    newCell = document.createElementNS(svgNS,'rect');
+                    newCell.setAttribute('x', buffer.x.baseVal.value+i*width);
+                    newCell.setAttribute('y', buffer.y.baseVal.value);
+                    newCell.setAttribute('width', width);
+                    newCell.setAttribute('height', width);
+                    newCell.setAttribute('class', 'bufferCell');
+                    newCell.style.stroke = '#4D4D60';
+                    newCell.style.strokeWidth = '1';
+                    newCell.style.fill = cells[i].style.fill;
+                    bankGroup.appendChild(newCell);
+                }
+            } else {
+                var bufferCell;
+                for (let i = 0; i < 8; i++) {
+                    bufferCell = document.getElementsByClassName('bufferCell')[i];
+                    bufferCell.style.fill = cells[i].style.fill;
+                }
+            }
+            
+        } else {
+            alert ('Введите значение от 0 до 7!')
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated')
+    }, false);
+
     form.addEventListener('submit', event => {
         var cell;
         var cells = [];
@@ -231,12 +309,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, false);
 
     const groupItems = document.querySelectorAll('.group');
-    const detailed = document.querySelector('.detailed');
-    for (let item of groupItems) {
-        item.addEventListener('click', () => {
-            detailed.classList.remove('hidden');
-        })
-    }
+    const detailed = document.querySelectorAll('.detailed');
+    detailed.forEach(detail => {
+        for (let item of groupItems) {
+            item.addEventListener('click', () => {
+                detail.classList.remove('hidden');
+            })
+        }
+    })
 
     const detailform = document.querySelector('.detailform');
     const detailcells = document.querySelectorAll('.detailcell');
