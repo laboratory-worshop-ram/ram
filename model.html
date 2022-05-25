@@ -68,59 +68,34 @@
 
         <section class="tm-section">
             <div style="display: flex; margin: 0 auto; width: max-content">   
-                <div class="dropdown" style="margin: 20px;">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Выберите модуль памяти
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item dropdown-item1 active" data-module="sdr" href="#">SDR SDRAM</a>
-                    <a class="dropdown-item dropdown-item1" data-module="ddr" href="#">DDR SDRAM</a>
-                    <a class="dropdown-item dropdown-item1" data-module="ddr2" href="#">DDR2 SDRAM</a>
-                    <a class="dropdown-item dropdown-item1" data-module="ddr3" href="#">DDR3 SDRAM</a>
-                    <a class="dropdown-item dropdown-item1" data-module="ddr42" href="#">DDR4 SDRAM (x4)</a>
-                    <a class="dropdown-item dropdown-item1" data-module="ddr4" href="#">DDR4 SDRAM (x8)</a>
-                    <a class="dropdown-item dropdown-item1" data-module="ddr5" href="#">DDR5 SDRAM</a>
-                    <a class="dropdown-item dropdown-item1" data-module="gddr" href="#">GDDR</a>
-                  </div>
+                
+                <div class="dropdown dropdown2" style="margin: 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 320px;">Выберите режим моделирования</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item dropdown-item2" data-op="o" href="#">Общий</a>
+                        <a class="dropdown-item dropdown-item2" data-op="d" href="#">Детальный</a>
+                        <a class="dropdown-item dropdown-item2" data-op="r" href="#">Регенерация</a>
+                        <a class="dropdown-item dropdown-item2" data-op="s" href="#">Сравнение скорости</a>
+                    </div>
                 </div>
-                <div class="dropdown" style="margin: 20px;">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Выберите режим моделирования
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item dropdown-item2 active" data-op="r" href="#">Общий</a>
-                    <a class="dropdown-item dropdown-item2" data-op="w" href="#">Детальный</a>
-                    <a class="dropdown-item dropdown-item2" data-op="d" href="#">Регенерация</a>
-                  </div>
+                <div class="dropdown dropdown1" style="margin: 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 320px;">Выберите модуль памяти</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item dropdown-item1" data-module="sdr" href="#">SDR SDRAM</a>
+                        <a class="dropdown-item dropdown-item1" data-module="ddr" href="#">DDR SDRAM</a>
+                        <a class="dropdown-item dropdown-item1" data-module="ddr2" href="#">DDR2 SDRAM</a>
+                        <a class="dropdown-item dropdown-item1" data-module="ddr3" href="#">DDR3 SDRAM</a>
+                        <a class="dropdown-item dropdown-item1" data-module="ddr42" href="#">DDR4 SDRAM (x4)</a>
+                        <a class="dropdown-item dropdown-item1" data-module="ddr4" href="#">DDR4 SDRAM (x8)</a>
+                        <a class="dropdown-item dropdown-item1" data-module="ddr5" href="#">DDR5 SDRAM</a>
+                    </div>
                 </div>
                 <button type="button" style="margin: 20px; background-color: #cc9900; color: white;" class="btn btn-warning" id="warning">Применить</button>
             </div> 
 
             <div class="container-fluid" style="overflow: auto; display: flex; flex-wrap: wrap;">
                 
-                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="r" style="zoom: .9;">
-                    <h2>SDR SDRAM</h2>
-                    <svg width="254" height="74"> 
-                        <rect x="2" y="2" rx="10"
-                          ry="10" width="250" height="70"
-                          style="fill:#CCCCFF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="60" y="45" font-size="20" fill="#333340">Memory Array</text>
-                    </svg>
-                    <svg class="icon" height="74" style="margin-left: -6px; margin-right: -6px;">
-                        <use xlink:href="#both"></use>
-                    </svg>
-                    <svg width="254" height="74"> 
-                        <rect x="2" y="2" rx="10"
-                          ry="10" width="250" height="70"
-                          style="fill:#9999BF; 
-                          stroke:#4D4D60;
-                          stroke-width:2"></rect>
-                          <text x="35" y="45" font-size="20" fill="#333340">Input/Output Buffers</text>
-                    </svg>
-                </div>
-                <div class="row tm-margin-t-mid ram hidden" data-module="gddr" data-op="r" style="zoom: .9;">
+                <div class="row tm-margin-t-mid ram hidden" data-op="s" style="zoom: .9;">
                     <h2>SDR SDRAM</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
@@ -143,7 +118,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="w">
+                <div class="row tm-margin-t-mid ram hidden" data-op="d">
                     <div>
                         <svg width="1175" height="350" style="">
                             <image class="group" x="0" y="0" width="125" height="190" href="img/group.png" />
@@ -379,42 +354,64 @@
                                   stroke:#4D4D60;
                                   stroke-width:2;">
                                 </rect>
+                                <text x="952" y="325" font-size="18" fill="#333340">8 bit</text>
                             </svg>
                         </div>
                     </div>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="d" style="">
+                <div class="row tm-margin-t-mid ram hidden" data-op="r" style="">
                     <div class="container-fluid detailbit hidden">
                         <form class="row g-3 detailform" style="margin-bottom: 30px;" novalidate>
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <h4 style="display: block; margin: auto; width: fit-content;">Введите данные:</h4>
                             </div>
                             <div class="col-md-5">
                                 <input type="text" pattern="[0-1]{16}" class="form-control" id="bits" placeholder="Строка" required>
                             </div>
-                            <div class="col-md-2">
-                                <button class="btn btn-primary" type="submit">Ок</button>
+                            <div class="col-md-3">
+                                <button class="btn btn-primary" type="submit">Запись</button>
                             </div>
                         </form>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4" style="margin-bottom: 30px;">
+                            <button class="btn btn-primary" id="recharge">Стекание заряда</button>
+                        </div>
                     </div>
                     <svg width="700" height="700">
-                        <image class="detailcell" x="50" y="50" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="200" y="50" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="350" y="50" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="500" y="50" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="50" y="200" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="200" y="200" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="350" y="200" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="500" y="200" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="50" y="350" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="200" y="350" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="350" y="350" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="500" y="350" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="50" y="500" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="200" y="500" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="350" y="500" width="150" height="150" href="img/zerocell.png" />
-                        <image class="detailcell" x="500" y="500" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell" x="50" y="50" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="200" y="50" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="350" y="50" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="500" y="50" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="50" y="200" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="200" y="200" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="350" y="200" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="500" y="200" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="50" y="350" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="200" y="350" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="350" y="350" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="500" y="350" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="50" y="500" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="200" y="500" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="350" y="500" width="150" height="150" href="img/onecell.png" />
+                        <image class="detailcell" x="500" y="500" width="150" height="150" href="img/onecell.png" />
+
+                        <image class="detailcell2" x="50" y="50" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="200" y="50" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="350" y="50" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="500" y="50" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="50" y="200" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="200" y="200" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="350" y="200" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="500" y="200" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="50" y="350" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="200" y="350" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="350" y="350" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="500" y="350" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="50" y="500" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="200" y="500" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="350" y="500" width="150" height="150" href="img/zerocell.png" />
+                        <image class="detailcell2" x="500" y="500" width="150" height="150" href="img/zerocell.png" />
                         <rect x="20" y="50" width="660" height="1" style="fill:#333340;"></rect>
                         <rect x="20" y="200" width="660" height="1" style="fill:#333340;"></rect>
                         <rect x="20" y="350" width="660" height="1" style="fill:#333340;"></rect>
@@ -434,7 +431,30 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="r" style="zoom: .7;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="sdr" data-op="o" style="zoom: .9;">
+                    <h2>SDR SDRAM</h2>
+                    <svg width="254" height="74"> 
+                        <rect x="2" y="2" rx="10"
+                          ry="10" width="250" height="70"
+                          style="fill:#CCCCFF; 
+                          stroke:#4D4D60;
+                          stroke-width:2"></rect>
+                          <text x="60" y="45" font-size="20" fill="#333340">Memory Array</text>
+                    </svg>
+                    <svg class="icon" height="74" style="margin-left: -6px; margin-right: -6px;">
+                        <use xlink:href="#both"></use>
+                    </svg>
+                    <svg width="254" height="74"> 
+                        <rect x="2" y="2" rx="10"
+                          ry="10" width="250" height="70"
+                          style="fill:#9999BF; 
+                          stroke:#4D4D60;
+                          stroke-width:2"></rect>
+                          <text x="35" y="45" font-size="20" fill="#333340">Input/Output Buffers</text>
+                    </svg>
+                </div>
+
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr" data-op="o" style="zoom: .7;">
                     <h2>DDR SDRAM</h2>
                     <svg width="254" height="150"> 
                         <rect x="2" y="2" rx="10"
@@ -475,7 +495,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="r" style="zoom: .7;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr2" data-op="o" style="zoom: .7;">
                     <h2>DDR2 SDRAM</h2>
                     <svg width="254" height="310"> 
                         <rect x="2" y="2" rx="10"
@@ -532,7 +552,7 @@
                     </svg> 
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="r" style="zoom: .7;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr3" data-op="o" style="zoom: .7;">
                     <h2>DDR3 SDRAM</h2>
                     <svg width="254" height="610"> 
                         <rect x="2" y="2" rx="10"
@@ -621,7 +641,7 @@
                     </svg> 
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="r" style="zoom: .6;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr4" data-op="o" style="zoom: .6;">
                     <h2>DDR4 SDRAM (x8)</h2>
                     <svg width="470" height="340" style="position: absolute; top: 90px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
@@ -794,7 +814,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr42" data-op="r" style="zoom: .6;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr42" data-op="o" style="zoom: .6;">
                     <h2>DDR4 SDRAM (x4)</h2>
                     <svg width="470" height="180" style="position: absolute; top: 90px; left: 0; background-color: #D2D2FF; opacity: 0.5; z-index: -2; margin: -15px;">
                     </svg>
@@ -983,7 +1003,7 @@
                     </svg>
                 </div>
 
-                <div class="row tm-margin-t-mid ram hidden" data-module="ddr5" data-op="r" style="zoom: .5;">
+                <div class="row tm-margin-t-mid ram hidden" data-module="ddr5" data-op="o" style="zoom: .5;">
                     <h2>DDR5 SDRAM</h2>
                     <svg width="104" height="1550" style="position: absolute; top: 90px; left: 493px;"> 
                         <rect x="2" y="35"  width="100" height="1450"
@@ -1361,7 +1381,7 @@
                     </div>
                 </div>
 
-                <div style="margin: 50px auto; width: 800px;" class="chartBox">
+                <div style="margin: 50px auto; width: 800px;" class="chartBox hidden">
                     <button class="btn btn-warning" id="button1" style="display: block; margin-left: auto; margin-right: auto">Запуск</button>
                     <canvas id="chart"></canvas>
                 </div>

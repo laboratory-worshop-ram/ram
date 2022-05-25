@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ramItems = document.querySelectorAll('.ram');
     const btnWarning = document.querySelector('.btn-warning');
     const varItems = document.querySelectorAll('.vari');
+    const dropdown1 = document.querySelector('.dropdown1');
+    const dropdownMenuButton1 = document.querySelector('#dropdownMenuButton1');
+    const dropdownMenuButton2 = document.querySelector('#dropdownMenuButton2');
 
     const btnRandom = document.querySelector('#random');
     const bankGroup = document.querySelector('.bankGroup');
@@ -21,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownItem1.forEach(item1 => {
                 if (item === item1) {
                     item1.classList.add('active');
+                    dropdownMenuButton1.textContent = item1.textContent;
                 } else {
                     item1.classList.remove('active');
                 }
@@ -30,11 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (const item of dropdownItem2) {
         item.addEventListener('click', () => {
-            dropdownItem2.forEach(item1 => {
-                if (item === item1) {
-                    item1.classList.add('active');
+            dropdownItem2.forEach(item2 => {
+                if (item === item2) {
+                    item2.classList.add('active');
+                    dropdownMenuButton2.textContent = item2.textContent;
+                    if (item2.dataset.op !== 'o') {
+                        dropdown1.classList.add('hidden');
+                    } else {
+                        dropdown1.classList.remove('hidden');
+                    }
                 } else {
-                    item1.classList.remove('active');
+                    item2.classList.remove('active');
                 }
             })
         })
@@ -54,6 +64,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     btnWarning.addEventListener('click', () => {
+
+        for (const ram of ramItems) {
+            ram.classList.add('hidden');
+            dropdownItem2.forEach(item2 => {
+                if (!item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
+                    ram.classList.add('hidden');
+                } else if (item2.classList.contains('active') && (ram.dataset.op === item2.dataset.op)) {
+                    if (item2.dataset.op !== 'o' && item2.dataset.op !== 's') {
+                        chartBox.classList.add('hidden');
+                    } else {
+                        chartBox.classList.remove('hidden');
+                    }
+                    if (item2.dataset.op !== 'o') {
+                        ram.classList.remove('hidden');
+                    } else {
+                        dropdownItem1.forEach(item1 => {
+                            if (!item1.classList.contains('active') && (ram.dataset.module === item1.dataset.module)) {
+                                ram.classList.add('hidden');
+                            } else if (item1.classList.contains('active') && (ram.dataset.module === item1.dataset.module)) {
+                                ram.classList.remove('hidden');
+                            }
+                        })
+                    }
+                    
+                }
+            })
+        }
+
+        /*if (item2.dataset.op !== 'o') {
+                        dropdown1.classList.add('hidden');
+                    }
+
         for (const ram of ramItems) {
             ram.classList.add('hidden');
             dropdownItem1.forEach(item1 => {
@@ -74,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                 }
             })
-        }
+        }*/
 
         for (const vari of varItems) {
             vari.classList.add('hidden');
@@ -112,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     newCell.style.stroke = '#4D4D60';
                     newCell.style.strokeWidth = '1';
                     if (arr[i][j] === 0) {
-                        newCell.style.fill = '#37B6CE';
+                        newCell.style.fill = '#FFF';
                     } else {
                         newCell.style.fill = '#FE7276';
                     }
@@ -130,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     arr[i][j]=Math.floor(Math.random()*2);
                     cell = document.getElementsByClassName('cell ' + x + '' + i + '' + j)[0];
                     if (arr[i][j] === 0) {
-                        cell.style.fill = '#37B6CE';
+                        cell.style.fill = '#FFF';
                     } else {
                         cell.style.fill = '#FE7276';
                     }
@@ -198,11 +240,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const detailform = document.querySelector('.detailform');
     const detailcells = document.querySelectorAll('.detailcell');
+    const detailcells2 = document.querySelectorAll('.detailcell2');
     detailform.addEventListener('submit', event => {
         if (bits.checkValidity()) {
             for (let i=0; i < 16; i++) {
                 if (bits.value[i] === '1') {
-                    detailcells[i].setAttribute('href', 'img/onecell.png');
+                    detailcells2[i].setAttribute('href', 'img/zerocell.png');
+                    detailcells2[i].style.opacity = 0;
+                } else {
+                    detailcells2[i].setAttribute('href', 'img/zerocell.png');
+                    detailcells2[i].style.opacity = 1;
                 }
             }
         } else {
@@ -210,6 +257,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         event.preventDefault();
         event.stopPropagation();
+        detailform.classList.add('was-validated')
     }, false);
+
+    const recharge = document.querySelector('#recharge');
+    const databits = document.querySelector('#bits');
+    recharge.addEventListener('click', () => {
+        if (databits.value.length<16) {
+            alert ('Сначала запишите данные!')
+        } else {
+            for (let i=0; i < 16; i++) {
+                if (databits.value[i] === '1') {
+                    detailcells2[i].setAttribute('href', 'img/recharge.png');
+                    detailcells2[i].style.opacity = 1;
+                }
+            }
+        }
+    })
 
 });
