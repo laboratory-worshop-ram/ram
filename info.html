@@ -113,8 +113,8 @@
                 3200 МГц.
             </p>
 
-            <img src="img/princip10.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid lefting">
             <h2 class="tm-gold-text tm-title">Основные Понятия</h2>
+            <img src="img/princip10.png" alt="Image" width="320" height="320" class="img-fluid lefting">
             <p align="justify">Оперативная память, или <b>RAM-память</b> (Random Access Memory), — это память с произвольным доступом.
 
                 Поскольку элементарной единицей информации является бит, оперативную память можно рассматривать как
@@ -180,8 +180,8 @@
             <p align="justify">В SDRAM-памяти ядро и буферы обмена работают в синхронном режиме на одной и той же частоте (100 или 133
                 МГц). Передача каждого бита из буфера происходит с каждым тактом работы ядра памяти.Временная диаграмма
                 работы памяти SDR SDRAM при длине пакета BL = 4 и таймингах tRCD = 2 и tCL = 2 показана на рис.</p>
-            <img src="img/Diagram.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
             <h2 class="tm-gold-text tm-title">Память DDR</h2>
+            <img src="img/Diagram.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
             <p align="justify">Память <b>DDR SDRAM</b>, которая пришла на смену памяти SDR, обеспечивает вдвое большую пропускную способность.
                 Аббревиатура DDR (Double Data Rate) в названии памяти означает удвоенную скорость передачи данных. В
                 DDR-памяти каждый буфер ввода-вывода на каждой из 64 линий шины данных передает два бита за один такт,
@@ -191,9 +191,9 @@
                 приводила к передаче из ядра памяти в буфер ввода-вывода сразу 2n бит. С этой целью используются две
                 независимые линии передачи от ядра памяти к буферам ввода-вывода шириной n бит каждая, откуда биты
                 поступают на шину данных в требуемом порядке.</p>
-            <img src="img/Read.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid lefting">
+            <img src="img/Read.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid ">
             <p> Реализация технологии 2n-Prefetch при операции чтения данных</p>
-            <img src="img/write.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
+            <img src="img/write.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid ">
             <p align="justify">Реализация технологии 2n-Prefetch при операции записи данных</p>
         
             <p align="justify">Поскольку при таком способе организации работы памяти происходит предвыборка 2n бит перед передачей их на
@@ -262,9 +262,10 @@
                 В памяти DDR2 реализована схема разбиения массива памяти на четыре логических банка, а для модулей
                 емкостью 1 и 2 Гбайт — на восемь логических банков.</p>
               
-            <img src="img/4n-prefetch.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid lefting">
+            
             
             <h2 class="tm-gold-text tm-title">Логическая организация памяти</h2>
+            <img src="img/4n-prefetch.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid lefting">
             <p align="justify">Полная строка ячеек памяти называется <b>страницей</b>, а длина её зависит от типа и конфигурации DRAM. Чем
                 длиннее страница, тем больше в ней бит, но и тем большая электрическая мощность нужна для её работы;
                 короткие страницы потребляют меньше мощности, но и содержат меньший объём данных.</p>
@@ -380,7 +381,6 @@
                 устройствами для сохранения общего количества контактов ввода-вывода на контроллере. Однако эта
                 топология P22P не снижает производительность системы из-за более низкой скорости передачи данных
                 адресной или командной шины.</p>
-            <p>________________________________________</p>
             <hr>
             <h2 class="tm-gold-text tm-title"> GDDR6</h2>
 
@@ -420,65 +420,6 @@
             <p></p>
             <hr>
 
-
-
-
-
-            <!--<div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                    <div class="tm-content-box">
-                        <img src="img/ddr4.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">DDR</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Далее</a>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                    <div class="tm-content-box">
-                        <img src="img/ddr2.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">DDR2</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Далее</a>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                    <div class="tm-content-box">
-                        <img src="img/ddr3.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">DDR3</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Далее</a>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                    <div class="tm-content-box">
-                        <img src="img/ddr4.jpg" alt="Image" class="tm-margin-b-20 img-fluid">
-                        <h4 class="tm-margin-b-20 tm-gold-text">DDR4</h4>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                        <p class="tm-margin-b-20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                        <a href="#" class="tm-btn text-uppercase">Далее</a>
-                    </div>
-
-                </div>
-            </div>-->
         </div>
     </section>
 
