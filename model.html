@@ -31,6 +31,9 @@
              <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 38" id="right2">
                 <path d="M127.768 20.7678C128.744 19.7915 128.744 18.2085 127.768 17.2322L111.858 1.32233C110.882 0.34602 109.299 0.34602 108.322 1.32233C107.346 2.29864 107.346 3.88155 108.322 4.85786L122.464 19L108.322 33.1421C107.346 34.1184 107.346 35.7014 108.322 36.6777C109.299 37.654 110.882 37.654 111.858 36.6777L127.768 20.7678ZM0 21.5H126V16.5H0V21.5Z" ></path>
             </symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 38" id="left2">
+                <path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM3 21.5H129V16.5H3V21.5Z"></path>
+            </symbol>
             <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="up">
                 <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"></path>
             </symbol>
@@ -97,7 +100,8 @@
             <div class="container-fluid" style="overflow: auto; display: flex; flex-wrap: wrap;">
                 
                 <div class="row tm-margin-t-mid ram hidden" data-op="s" style="zoom: .9;">
-                    <h2>SDR SDRAM</h2>
+                    <img>
+                    <h2>GDDR</h2>
                     <svg width="254" height="74"> 
                         <rect x="2" y="2" rx="10"
                           ry="10" width="250" height="70"
@@ -487,15 +491,15 @@
                     <div class="detailed hidden">
                         <button class="btn random" id="random1" style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 30px;">Random</button>
                         <div class="container-fluid rowcol1 hidden">
-                            <form class="row g-3 needs-validation" style="margin-bottom: 30px;" novalidate>
+                            <form class="row g-3 needs-validation1" style="margin-bottom: 30px;" novalidate>
                                 <div class="col-md-3">
-                                    <h4 style="display: block; margin: auto; width: fit-content;">Введите значения:</h4>
+                                    <h4 style="display: block; margin: auto; width: fit-content;">Введите значения 1:</h4>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" id="row" placeholder="Строка" required>
+                                    <input type="number" class="form-control" id="row1" placeholder="Строка 1" required>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" id="col" placeholder="Столбец" required>
+                                    <input type="number" class="form-control" id="col1" placeholder="Столбец 1" required>
                                 </div>
                                 <div class="col-md-2">
                                     <button class="btn btn-primary" type="submit">Submit</button>

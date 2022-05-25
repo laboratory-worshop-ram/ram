@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.classList.add('was-validated')
     }, false);
 
-    form.addEventListener('submit', event => {
+    form1.addEventListener('submit', event => {
         var cell;
         var cells = [];
         if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
