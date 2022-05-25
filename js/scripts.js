@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const formDiv1 = document.querySelector('.rowcol1');
     const row = document.querySelector('#row');
     const col = document.querySelector('#col');
+    const row1 = document.querySelector('#row1');
+    const col1 = document.querySelector('#col1');
     const buffer = document.querySelector('.buffer');
+    const buffer1 = document.querySelector('.buffer1');
     const chartBox = document.querySelector('.chartBox');
 
     for (const item of dropdownItem1) {
@@ -264,33 +267,33 @@ document.addEventListener('DOMContentLoaded', () => {
     form1.addEventListener('submit', event => {
         var cell;
         var cells = [];
-        if (row.value>=0 && row.value<=7 && col.value>=0 && col.value<=7) {
+        if (row1.value>=0 && row1.value<=7 && col1.value>=0 && col1.value<=7) {
             for (let item of document.getElementsByClassName('cell')) {
                 item.style.stroke = '#4D4D60';
                 item.style.strokeWidth = '1';
             }
             for (let i = 0; i < 8; i++) {
-                cell = document.getElementsByClassName('cell ' + i + '' + row.value + '' + col.value)[0];
+                cell = document.getElementsByClassName('cell ' + i + '' + row1.value + '' + col1.value)[0];
                 cell.style.stroke = 'rgb(255, 205, 86)';
                 cell.style.strokeWidth = '3';
                 cells.push(cell);
             }
-            var svgNS = bankGroup.namespaceURI;
+            var svgNS = bankGroup1.namespaceURI;
             var newCell;
-            var width = buffer.width.baseVal.value/8;
-            if (buffer.classList.contains('empty')) {
-                buffer.classList.remove('empty');
+            var width = buffer1.width.baseVal.value/8;
+            if (buffer1.classList.contains('empty')) {
+                buffer1.classList.remove('empty');
                 for (let i = 0; i < 8; i++) {
                     newCell = document.createElementNS(svgNS,'rect');
-                    newCell.setAttribute('x', buffer.x.baseVal.value+i*width);
-                    newCell.setAttribute('y', buffer.y.baseVal.value);
+                    newCell.setAttribute('x', buffer1.x.baseVal.value+i*width);
+                    newCell.setAttribute('y', buffer1.y.baseVal.value);
                     newCell.setAttribute('width', width);
                     newCell.setAttribute('height', width);
                     newCell.setAttribute('class', 'bufferCell');
                     newCell.style.stroke = '#4D4D60';
                     newCell.style.strokeWidth = '1';
                     newCell.style.fill = cells[i].style.fill;
-                    bankGroup.appendChild(newCell);
+                    bankGroup1.appendChild(newCell);
                 }
             } else {
                 var bufferCell;
@@ -305,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         event.preventDefault();
         event.stopPropagation();
-        form.classList.add('was-validated')
+        form1.classList.add('was-validated')
     }, false);
 
     const groupItems = document.querySelectorAll('.group');
