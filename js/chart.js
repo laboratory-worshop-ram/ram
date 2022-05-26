@@ -512,7 +512,7 @@ const data3 = {
       // segment: {
       //   borderColor: ctx => down(ctx, purpul) || up(ctx, yellow),
       // },
-      yAxisID: 'y4',
+      yAxisID: 'y',
       //stepped: true,
     },
 
@@ -972,19 +972,6 @@ const config3 = {
   type: 'line',
   data: data3,
   options: {
-    /*animation: {
-      onComplete: () => {
-        delayed = true;
-      },
-      delay: (context) => {
-        let delay = 0;
-        if (context.type === 'data' && context.mode === 'default' && !delayed) {
-          delay = context.dataIndex * 250 ;
-          context.dataset.borderColor = red;
-        }
-        return delay;
-      },
-    },*/
     animation,
     interaction: {
       intersect: false
@@ -1002,20 +989,8 @@ const config3 = {
           // stepSize:50,
         }
       },
+
       y: {
-        type: 'linear',
-        offset: true,
-        position: 'left',
-        stack: 'demo',
-        stackWeight: 2,
-        grid: {
-          borderColor: purpul
-        },
-        ticks: {
-          color: transparent,
-        },
-      },
-      y4: {
         type: 'linear',
         offset: true,
         position: 'left',
