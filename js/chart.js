@@ -459,8 +459,8 @@ const data3 = {
       label: 'Clock',
       data: [...Array(dataCount)].map((v, i) => Math.max(0, Math.min(1, i % 8 - 3))),
 
-      borderColor: red,
-      backgroundColor: red,
+      borderColor:purpul,
+      backgroundColor: purpul,
       yAxisID: 'y5',
       // segment: {
       //   borderColor: ctx => up(ctx, green),
