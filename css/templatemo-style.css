@@ -44,11 +44,15 @@ h2 {
 	display: none;
 }
 
+.hidden {
+	display: none;
+}
+
 .detailed.hidden {
 	display: none;
 }
 
-.group:hover {
+.group:hover,.SA_group {
 	cursor: pointer;
 }
 
@@ -719,12 +723,23 @@ p {
 #multi-channel:hover #channel1>line {
 	stroke: #006699;
 }
+
 #multi-channel:hover #channel2>line {
 	stroke: #992400;
 }
+
 #multi-channel:hover #channel3>line {
 	stroke: #009914;
 }
+
 #multi-channel:hover #channel4>line {
 	stroke: #7f0099;
+}
+
+#SA_model-clickable {
+	pointer-events: all !important;
+}
+
+#SA_model svg {
+	pointer-events: none;
 }
