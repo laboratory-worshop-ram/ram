@@ -52,6 +52,18 @@
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="down">
       <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"></path>
     </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379 112" id="b2">
+      <line x1="51" y1="82" x2="339" y2="82" stroke="black" stroke-width="2"></line>
+      <path d="M347.5 69.5C347.5 79.1 341.167 81.8333 338.5 82M42.5 69.5C42.5 79.1 48.8333 81.8333 51.5 82" stroke="black" stroke-width="2"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702 83" id="b1">
+      <line x1="48" y1="62" x2="500" y2="62" stroke="black" stroke-width="2"></line>
+      <path d="M505.5 56C505.5 58 504.4 62 500 62M43 56C43 58 44.1 62 48.5 62" stroke="black" stroke-width="2"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379 112" id="b3">
+      <line x1="51" y1="82" x2="181" y2="82" stroke="black" stroke-width="2"></line>
+      <path d="M190.5 69.5C190.5 79.1 184.167 81.8333 181.5 82M42.5 69.5C42.5 79.1 48.8333 81.8333 51.5 82" stroke="black" stroke-width="2"></path>
+    </symbol>
   </svg>
 
   <div class="tm-header">
@@ -91,9 +103,9 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item dropdown-item2" data-op="o" href="#">Общий</a>
           <a class="dropdown-item dropdown-item2" data-op="d" href="#">Детальный</a>
-          <a class="dropdown-item dropdown-item2" data-op="r" href="#">Регенерация</a>
-          <a class="dropdown-item dropdown-item2" data-op="s" href="#">Сравнение скорости(GDDR)</a>
-          <a class="dropdown-item dropdown-item2" data-op="m" href="#">Многоканальность(GDDR)</a>
+          <a class="dropdown-item dropdown-item2" data-op="r" href="#">Регенерация (DDR, GDDR, LPDDR)</a>
+          <a class="dropdown-item dropdown-item2" data-op="s" href="#">Сравнение скорости (GDDR)</a>
+          <a class="dropdown-item dropdown-item2" data-op="m" href="#">Многоканальность (GDDR)</a>
           <a class="dropdown-item dropdown-item2" data-op="g" href="#">Одновременный доступ (GDDR)</a>
         </div>
       </div>
@@ -130,7 +142,6 @@
         <p><b>Quad Data Rate</b></p>
         <img src="img/bank.jpeg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid center" />
       </div>
-      <div class="row tm-margin-t-mid ram hidden" data-op="s" style="zoom: 0.9"></div>
 
       <div class="row tm-margin-t-mid ram hidden" data-op="m" style="zoom: 0.9">
         <svg width="700" height="700" viewBox="0 0 467 403" id="multi-channel" fill="none"
@@ -497,7 +508,7 @@
       </div>
 
       <div class="row tm-margin-t-mid ram hidden" data-op="r">
-        <div class="container-fluid detailbit hidden">
+        <div class="container-fluid detailbit">
           <form class="row g-3 detailform" style="margin-bottom: 30px" novalidate>
             <div class="col-md-4">
               <h4 style="display: block; margin: auto; width: fit-content">
@@ -1746,6 +1757,24 @@
           Запуск
         </button>
         <canvas id="chart"></canvas>
+        <div>
+          <svg class="b1 hidden" width="800" height="74" style="margin-top: -20px;">
+            <use x="155" y="-45" xlink:href="#b1"></use>
+            <text x="470" y="30">8 bit</text>
+          </svg>
+          <svg class="b2 hidden" width="800" height="74" style="margin-top: -20px;">
+            <use x="45" y="-45" xlink:href="#b2"></use>
+            <text x="430" y="30">8 bit</text>
+          </svg>
+          <svg class="b3 hidden" width="800" height="74" style="margin-top: -20px;">
+            <use x="115" y="-45" xlink:href="#b3"></use>
+            <text x="450" y="30">8 bit</text>
+          </svg>
+          <svg class="b4 hidden" width="800" height="74" style="margin-top: -20px;">
+            <use x="115" y="-45" xlink:href="#b3"></use>
+            <text x="450" y="30">16 bit</text>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
