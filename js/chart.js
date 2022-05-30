@@ -443,6 +443,89 @@ const data4 = {
     },
   ]
 };
+
+const data5 = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'CK',
+      data: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,],
+      borderColor: red,
+      backgroundColor: red,
+      yAxisID: 'y2',
+      pointRadius: 0,
+    },
+    {
+      label: 'CA',
+      data: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1],
+      borderColor: green,
+      backgroundColor: green,
+      pointRadius: 0,
+      yAxisID: 'y3',
+    },
+    {
+      label: '',
+      data: [0, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1],
+      borderColor: green,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y3',
+    },
+
+
+    {
+      label: 'WCK_Statick',
+      data: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      borderColor: purpul,
+      backgroundColor: purpul,
+      pointRadius: 0,
+      yAxisID: 'y4',
+    },
+    {
+      label: '',
+      data: [0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0],
+      borderColor: purpul,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y4',
+    },
+
+    {
+      label: 'WCK_Half',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+      borderColor: purpul,
+      backgroundColor: purpul,
+      pointRadius: 0,
+      yAxisID: 'y5',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0],
+      borderColor: purpul,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y5',
+    },
+    {
+      label: 'WCK_Full',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1],
+      borderColor: purpul,
+      backgroundColor: purpul,
+      pointRadius: 0,
+      yAxisID: 'y6',
+    },
+    {
+      label: '',
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1],
+      borderColor: purpul,
+      backgroundColor: transparent,
+      pointRadius: 0,
+      yAxisID: 'y6',
+    },
+
+  ]
+};
+
 const common = {}
 const dataCount = 40
 const down = (ctx, value) => ctx.p0.parsed.y > ctx.p1.parsed.y ? value : undefined;
@@ -611,6 +694,110 @@ const config = {
       },
     }
   },
+  plugins: [customLegend]
+};
+
+const config5 = {
+  type: 'line',
+  data: data5,
+  options: {
+    animation,
+    interaction: {
+      intersect: false
+    },
+    layout: {
+      padding: {
+        left: (context) => {
+          return context.chart.ctx.measureText('Address').width + 36;
+        }
+      }
+    },
+    scales: {
+      y: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: purpul
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      
+      
+      y6: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: red
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y5: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: green
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y4: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: blue
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y3: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: green
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+      y2: {
+        type: 'linear',
+        offset: true,
+        position: 'left',
+        stack: 'demo',
+        stackWeight: 1,
+        grid: {
+          borderColor: red
+        },
+        ticks: {
+          color: transparent,
+        },
+      },
+     
+
+    }
+  },
+  
   plugins: [customLegend]
 };
 
@@ -1069,6 +1256,8 @@ var chart;
         chart = new Chart(ctx, config2);
       } else if (ram.dataset.op === 's' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config3);
+      } else if (ram.dataset.op === 'l' && !ram.classList.contains('hidden')) {
+        chart = new Chart(ctx, config5);
       }
     }
   });

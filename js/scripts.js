@@ -79,7 +79,7 @@ const initSimultaneousAccessModel = () => {
   const writeMemoryCell = (bank, x, y, value) => (memory[bank][x][y] = value);
 
   const writeColorHighlight = "#1B4079";
-  const readColorHighlight = "#F42C04";
+  const readColorHighlight = "#000000";
 
   const isMatchingAddress = (a, b) => a[0] == b[0] && a[1] == b[1];
 
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
           item2.classList.contains("active") &&
           ram.dataset.op === item2.dataset.op
         ) {
-          if (item2.dataset.op !== "o" && item2.dataset.op !== "s") {
+          if (item2.dataset.op !== "o" && item2.dataset.op !== "s" && item2.dataset.op !== "l") {
             chartBox.classList.add("hidden");
           } else {
             chartBox.classList.remove("hidden");
