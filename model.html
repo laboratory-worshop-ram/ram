@@ -802,9 +802,9 @@
               <rect x="920" y="270" width="2" height="70" style="fill: #4d4d60"></rect>
               <rect x="1015" y="305" width="2" height="265" style="fill: #4d4d60"></rect>
               <use xlink:href="#up" x="412.7" y="536" height="35" style="fill: #4d4d60"></use>
-              <g id="SA_write-buffer-group">
+              <g id="SA_write-buffer-group" style="cursor: pointer;">
                 <rect id="SA_write-buffer" class="buffer1 empty" x="992" y="572" width="180" height="22.5"
-                  style="fill: #fff; stroke: #4d4d60; stroke-width: 2"></rect>
+                  style="fill: #fff; stroke: #4d4d60; stroke-width: 2;"></rect>
                 <text x="1052" y="618" font-size="18" fill="#333340">
                   тid 8
                 </text>
@@ -1787,21 +1787,22 @@
         <button class="btn btn-warning" id="button1" style="display: block; margin-left: auto; margin-right: auto">
           Запуск
         </button>
+        <h5 class="helper hide">Для одной группы банков</h5>
         <canvas id="chart"></canvas>
-        <div>
-          <svg class="b1 hidden" width="800" height="74" style="margin-top: -20px;">
+        <div style="position: relative;">
+          <svg class="b b1 hide" width="800" height="74">
             <use x="155" y="-45" xlink:href="#b1"></use>
             <text x="470" y="30">8 bit</text>
           </svg>
-          <svg class="b2 hidden" width="800" height="74" style="margin-top: -20px;">
+          <svg class="b b2 hide" width="800" height="74">
             <use x="45" y="-45" xlink:href="#b2"></use>
             <text x="430" y="30">8 bit</text>
           </svg>
-          <svg class="b3 hidden" width="800" height="74" style="margin-top: -20px;">
+          <svg class="b b3 hide" width="800" height="74">
             <use x="115" y="-45" xlink:href="#b3"></use>
             <text x="450" y="30">8 bit</text>
           </svg>
-          <svg class="b4 hidden" width="800" height="74" style="margin-top: -20px;">
+          <svg class="b b4 hide" width="800" height="74">
             <use x="115" y="-45" xlink:href="#b3"></use>
             <text x="450" y="30">16 bit</text>
           </svg>
@@ -1814,7 +1815,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 tm-copyright-col">
-          <p class="tm-copyright-text">Copyright 2022</p>
+          <p class="tm-copyright-text">Copyright MIEM 2022</p>
         </div>
       </div>
     </div>

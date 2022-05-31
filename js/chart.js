@@ -1234,6 +1234,11 @@ const config3 = {
 const ramItems = document.querySelectorAll('.ram');
 var ctx = document.getElementById('chart');
 var chart;
+const b1 = document.querySelector('.b1');
+const b2 = document.querySelector('.b2');
+const b3 = document.querySelector('.b3');
+const b4 = document.querySelector('.b4');
+const helper = document.querySelector('.helper');
 
 (function () {
 
@@ -1242,18 +1247,25 @@ var chart;
     for (const ram of ramItems) {
       if (ram.dataset.module === 'sdr' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config);
+        setTimeout(() => b1.classList.remove('hide'), totalDuration + 1200);
       } else if (ram.dataset.module === 'ddr' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config1);
+        setTimeout(() => b2.classList.remove('hide'), totalDuration + 1000);
       } else if (ram.dataset.module === 'ddr2' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
+        setTimeout(() => b3.classList.remove('hide'), totalDuration + 200);
       } else if (ram.dataset.module === 'ddr3' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config4);
+        setTimeout(() => b4.classList.remove('hide'), totalDuration + 200);
       } else if (ram.dataset.module === 'ddr4' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config4);
+        setTimeout(() => {b4.classList.remove('hide'); helper.classList.remove('hide')}, totalDuration + 200);
       } else if (ram.dataset.module === 'ddr42' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
+        setTimeout(() => {b3.classList.remove('hide'); helper.classList.remove('hide')}, totalDuration + 200);
       } else if (ram.dataset.module === 'ddr5' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config2);
+        setTimeout(() => {b3.classList.remove('hide'); helper.classList.remove('hide')}, totalDuration + 200);
       } else if (ram.dataset.op === 's' && !ram.classList.contains('hidden')) {
         chart = new Chart(ctx, config3);
       } else if (ram.dataset.op === 'l' && !ram.classList.contains('hidden')) {
