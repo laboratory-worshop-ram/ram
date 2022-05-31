@@ -75,6 +75,25 @@ h2 {
 	margin-top: 6rem;
 }
 
+.b.hide {
+	opacity: 0;
+}
+
+.b {
+	margin-top: -20px;
+	transition: 0.2s;
+	position: absolute;
+}
+
+.helper {
+	margin: 15px 0 15px 100px;
+	transition: 0.2s;
+}
+
+.helper.hide {
+	opacity: 0;
+}
+
 @media (max-width: 1390px) {
 	.container-fluid {
 		padding-left: 5%;

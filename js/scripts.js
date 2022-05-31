@@ -217,6 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const buffer = document.querySelector(".buffer");
   const buffer1 = document.querySelector(".buffer1");
   const chartBox = document.querySelector(".chartBox");
+  const b = document.querySelectorAll('.b');
 
   for (const item of dropdownItem1) {
     item.addEventListener("click", () => {
@@ -262,6 +263,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   btnWarning.addEventListener("click", () => {
+    b.forEach((item) => {
+      item.classList.add('hide');
+    })
+    helper.classList.add('hide');
     for (const ram of ramItems) {
       ram.classList.add("hidden");
       dropdownItem2.forEach((item2) => {
