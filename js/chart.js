@@ -474,8 +474,8 @@ const data5 = {
 
 
     {
-      label: 'WCK_Statick',
-      data: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      label: 'WCK_Synchro',
+      data: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,  1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1],
       borderColor: purpul,
       backgroundColor: purpul,
       pointRadius: 0,
@@ -483,45 +483,45 @@ const data5 = {
     },
     {
       label: '',
-      data: [0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0],
+      data: [0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0,  -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1],
       borderColor: purpul,
       backgroundColor: transparent,
       pointRadius: 0,
       yAxisID: 'y4',
     },
 
-    {
-      label: 'WCK_Half',
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
-      borderColor: purpul,
-      backgroundColor: purpul,
-      pointRadius: 0,
-      yAxisID: 'y5',
-    },
-    {
-      label: '',
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0],
-      borderColor: purpul,
-      backgroundColor: transparent,
-      pointRadius: 0,
-      yAxisID: 'y5',
-    },
-    {
-      label: 'WCK_Full',
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1],
-      borderColor: purpul,
-      backgroundColor: purpul,
-      pointRadius: 0,
-      yAxisID: 'y6',
-    },
-    {
-      label: '',
-      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1],
-      borderColor: purpul,
-      backgroundColor: transparent,
-      pointRadius: 0,
-      yAxisID: 'y6',
-    },
+    // {
+    //   label: 'WCK_Half',
+    //   data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+    //   borderColor: purpul,
+    //   backgroundColor: purpul,
+    //   pointRadius: 0,
+    //   yAxisID: 'y5',
+    // },
+    // {
+    //   label: '',
+    //   data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0, -1, -1, -1, -1, 0],
+    //   borderColor: purpul,
+    //   backgroundColor: transparent,
+    //   pointRadius: 0,
+    //   yAxisID: 'y5',
+    // },
+    // {
+    //   label: 'WCK_Full',
+    //   data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1],
+    //   borderColor: purpul,
+    //   backgroundColor: purpul,
+    //   pointRadius: 0,
+    //   yAxisID: 'y6',
+    // },
+    // {
+    //   label: '',
+    //   data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1, 0, -1, -1],
+    //   borderColor: purpul,
+    //   backgroundColor: transparent,
+    //   pointRadius: 0,
+    //   yAxisID: 'y6',
+    // },
 
   ]
 };
@@ -728,32 +728,32 @@ const config5 = {
       },
       
       
-      y6: {
-        type: 'linear',
-        offset: true,
-        position: 'left',
-        stack: 'demo',
-        stackWeight: 1,
-        grid: {
-          borderColor: red
-        },
-        ticks: {
-          color: transparent,
-        },
-      },
-      y5: {
-        type: 'linear',
-        offset: true,
-        position: 'left',
-        stack: 'demo',
-        stackWeight: 1,
-        grid: {
-          borderColor: green
-        },
-        ticks: {
-          color: transparent,
-        },
-      },
+      // y6: {
+      //   type: 'linear',
+      //   offset: true,
+      //   position: 'left',
+      //   stack: 'demo',
+      //   stackWeight: 1,
+      //   grid: {
+      //     borderColor: red
+      //   },
+      //   ticks: {
+      //     color: transparent,
+      //   },
+      // },
+      // y5: {
+      //   type: 'linear',
+      //   offset: true,
+      //   position: 'left',
+      //   stack: 'demo',
+      //   stackWeight: 1,
+      //   grid: {
+      //     borderColor: green
+      //   },
+      //   ticks: {
+      //     color: transparent,
+      //   },
+      // },
       y4: {
         type: 'linear',
         offset: true,
