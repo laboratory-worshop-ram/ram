@@ -1,4 +1,4 @@
-# Лабораторный практикум "Принципы работы модуля ОЗУ
+# Лабораторный практикум "Принципы работы модуля ОЗУ"
 
 [Laboratory Workshop](https://laboratory-worshop-ram.github.io/ram/index.html "RAM")
 
