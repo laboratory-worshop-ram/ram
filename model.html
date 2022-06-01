@@ -134,7 +134,7 @@
     </div>
     <!--<img src="img/SDRAM.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid ">-->
 
-    <div class="container-fluid" style="overflow: auto; display: flex; flex-wrap: wrap">
+    <div class="container-fluid" style="overflow: hidden; display: flex; flex-wrap: wrap">
       <div class="row tm-margin-t-mid ram hidden" data-op="s" style="zoom: 0.9">
         <p><b>Single Data Rate</b></p>
 
@@ -601,16 +601,17 @@
          <p align="justify"> Устанавливаемая непосредственно на материнскую плату память LPDDR4x занимает мало места и 
            подключается 
            по коротким проводникам, что обеспечивает улучшенную передачу сигнала.</p> 
-        <img src="img/чип памяти LP.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid lefting">
-
-        <img src="img/DDR4in.jpeg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <img src="img/чип памяти LP.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid" style="margin: 0 40px 10px">
+          <img src="img/DDR4in.jpeg" alt="Image" width="470" height="500" class="tm-margin-b-20 img-fluid" style="margin: 0 40px 10px">
+        </div>  
         <p align="justify">Помимо размера и энергопотребления немаловажным является и вопрос производительности. Память
           LPDDR4x используется в ноутбуках в двухканальной архитектуре. По сравнению с одноканальным подключением это
           позволяет снизить длину проводников, что приводит к двойной выгоде: ускоренной передаче данных и меньшему
           энергопотреблению. Вот почему LPDDR4x-4267 достигает гораздо лучшего результата в тесте AIDA 64 Cache & Memory
           по сравнению с одноканальной DDR4-3200.
         </p>
-        <img src="img/dif.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
+        <img src="img/dif.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting" style="margin-left: 40px">
       
       <p align="justify">Разделение CK и WCK является сложной задачей, поскольку LPDDR5 SDRAM требует внутренней синхронизации этих сигналов для обработки любой передачи данных на устройство или с устройства. Синхронизация CK с WCK занимает несколько циклов CK, а это означает, что при выполнении операции синхронизации возникает реальный штраф, поэтому будет выгодно по возможности избегать этого. Кроме того, существует определенная последовательность того, как WCK должен вести себя для синхронизации, начиная со статических утверждений по крайней мере для одного CK, за которым следует один CK активности половинной скорости, за которым следует переменное количество CK активности полной скорости на основе рабочая частота. Для рассмотрения примера процедуры нажмите на кнопку Запуск.</p> </div>
 

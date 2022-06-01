@@ -76,7 +76,7 @@
                 запирать заряд и хранить в себе годами. Поэтому данные на SSD-диске не стираются когда вы выключаете
                 компьютер. Также ПЗУ устройством можно назвать VHS-кассеты с магнитной лентой, CD-диски и даже
                 перфокарты. В общем всё, что может хранить данные достаточно долго.</p>
-            <img src="img/charge2.gif" alt="Image" width="320" height="320" class="img-fluid righting">
+            <img src="img/charge2.gif" alt="Image" width="320" height="320" class="img-fluid righting" style="margin: 15px 0 15px 30px">
             <p align="justify"> Оперативная память напротив — энергозависимая. То есть она способна хранить данные
                 только при постоянной
                 подпитке электричеством. Почему так? В оперативной памяти каждый бит данных хранится на маленьком
@@ -151,8 +151,8 @@
                 3200 МГц.
             </p>
 
-            <h2 class="tm-gold-text tm-title">Основные Понятия</h2>
-            <img src="img/princip10.png" alt="Image" width="320" height="320" class="img-fluid lefting">
+            <h2 class="tm-gold-text tm-title">Основные понятия</h2>
+            <img src="img/princip10.png" alt="Image" width="320" height="320" class="img-fluid lefting" style="margin: 15px 30px 15px 0">
             <p align="justify">Оперативная память, или <b>RAM-память</b> (Random Access Memory), — это память с
                 произвольным доступом.
 
@@ -192,15 +192,15 @@
 
                 Следует разобраться с аббревиатурами CAS и RAS. Последние две буквы означают Address Strobe —
                 строб-сигнал адреса. Только в первом случае это про колонку (Column), а во втором — про строку (Row).
-                <br> 1 <b>CAS Latency</b> - латентность CAS.(Один из самых значимых показателей: именно он говорит,
+                <br> 1) <b>CAS Latency</b> - латентность CAS. (Один из самых значимых показателей: именно он говорит,
                 сколько
                 времени в целом уходит на поиск необходимых данных после того, как ЦП попросит доступ на
                 считывание)</br>
-                2 <b>RAS to CAS Delay</b> - задержка RAS to CAS.(Указывает на число тактов, которое занимает получение
+                2) <b>RAS to CAS Delay</b> - задержка RAS to CAS. (Указывает на число тактов, которое занимает получение
                 доступа
                 к RAM и активации строки, а потом — колонки, которая содержит необходимое инфо, и команды на считывание
                 данных или же их запись)</br>
-                3 <b>RAS Precharge Time</b> - время зарядки RAS.(Поскольку ОЗУ — динамическая память, ее ячейки время от
+                3) <b>RAS Precharge Time</b> - время зарядки RAS. (Поскольку ОЗУ — динамическая память, ее ячейки время от
                 времени разряжаются и нуждаются в периодической перезарядке. По этой причине данные, которые содержатся
                 в ней, обновляются. Это называется регенерацией ОЗУ.
 
@@ -242,7 +242,7 @@
                 МГц). Передача каждого бита из буфера происходит с каждым тактом работы ядра памяти.Временная диаграмма
                 работы памяти SDR SDRAM при длине пакета BL = 4 и таймингах tRCD = 2 и tCL = 2 показана на рис.</p>
             <h2 class="tm-gold-text tm-title">Память DDR</h2>
-            <img src="img/Diagram.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
+            <img src="img/Diagram.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid center">
             <p align="justify">Память <b>DDR SDRAM</b>, которая пришла на смену памяти SDR, обеспечивает вдвое большую
                 пропускную способность.
                 Аббревиатура DDR (Double Data Rate) в названии памяти означает удвоенную скорость передачи данных. В
@@ -253,10 +253,10 @@
                 приводила к передаче из ядра памяти в буфер ввода-вывода сразу 2n бит. С этой целью используются две
                 независимые линии передачи от ядра памяти к буферам ввода-вывода шириной n бит каждая, откуда биты
                 поступают на шину данных в требуемом порядке.</p>
-            <img src="img/Read.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid ">
-            <p> Реализация технологии 2n-Prefetch при операции чтения данных</p>
-            <img src="img/write.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid ">
-            <p align="justify">Реализация технологии 2n-Prefetch при операции записи данных</p>
+            <img src="img/Read.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid center">
+            <p align="center"> Реализация технологии 2n-Prefetch при операции чтения данных</p>
+            <img src="img/write.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid center">
+            <p align="center">Реализация технологии 2n-Prefetch при операции записи данных</p>
 
             <p align="justify">Поскольку при таком способе организации работы памяти происходит предвыборка 2n бит перед
                 передачей их на
@@ -268,7 +268,7 @@
                 Именно поэтому длина пакета (Burst Length, BL) при передаче данных в устройствах DDR SDRAM не может быть
                 меньше 2.</p>
             <img src="img/2N-Prefetch.png" alt="Image" width="500" height="500"
-                class="tm-margin-b-20 img-fluid lefting">
+                class="tm-margin-b-20 img-fluid lefting" style="margin: 15px 30px 15px 0">
             <p align="justify">Для того чтобы осуществить синхронизацию работы ядра памяти и буферов ввода-вывода,
                 используется одна и
                 та же тактовая частота (одни и те же тактирующие импульсы). Только если в самом ядре памяти
@@ -301,10 +301,6 @@
                 выводятся по шине шириной n бит синхронно с положительным и отрицательным фронтами.</p>
             <hr>
             <h2 class="tm-gold-text tm-title">Следующие поколения DDR</h2>
-
-            <img src="img/read 4n-0000.jpg" alt="Image" height="200" class="tm-margin-b-20 img-fluid righting">
-            <p>Реализация технологии <b>4n-Prefetch</b> при операции чтения данных</p>
-
             <p align="justify">Если следовать терминологии SDR (Single Data Rate), DDR (Double Data Rate), то память
                 DDR2 было бы
                 логично назвать QDR (Quadra Data Rate), поскольку этот стандарт подразумевает в четыре раза большую
@@ -319,11 +315,8 @@
                 фронтов происходит передача битов в мультиплексном режиме на шину данных. Это позволяет
                 за каждый такт работы ядра памяти передавать четыре слова на шину данных, то есть вчетверо повысить
                 пропускную способность памяти.</p>
-            <p align="justify">Реализация технологии 4n-Prefetch при операции чтения данных</p>
-
-
-
-
+                <img src="img/read 4n-0000.jpg" alt="Image" height="200" class="tm-margin-b-20 img-fluid center">
+            <p align="center">Реализация технологии <b>4n-Prefetch</b> при операции чтения данных</p>
             <p align="justify">По сравнению с памятью DDR память DDR2 позволяет обеспечить ту же пропускную способность,
                 но при вдвое
                 меньшей частоте ядра. К примеру, в памяти DDR400 ядро функционирует на частоте 200 МГц, а в памяти
@@ -336,7 +329,7 @@
 
             <h2 class="tm-gold-text tm-title">Логическая организация памяти</h2>
             <img src="img/4n-prefetch.png" alt="Image" width="500" height="500"
-                class="tm-margin-b-20 img-fluid lefting">
+                class="tm-margin-b-20 img-fluid lefting" style="margin: 15px 30px 15px 0">
             <p align="justify">Полная строка ячеек памяти называется <b>страницей</b>, а длина её зависит от типа и
                 конфигурации DRAM. Чем
                 длиннее страница, тем больше в ней бит, но и тем большая электрическая мощность нужна для её работы;
@@ -509,15 +502,18 @@
                 цикла внутреннего массива 1ns равно скорость передачи данных 16 Гбит/с).Двухканальный режим работы GDDR6
                 позволяет разработчикам контроллеров, знакомым с GDDR5 рассматривать одно устройство GDDR6 просто как
                 два устройства GDDR5.</p>
-            <img src="img/GDDR5x32.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid lefting ">
+            
+            <div style="display: flex; justify-content: center; align-items: center">
+                <img src="img/GDDR5x32.png" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid">
 
             <img src="img/GDDR6x16x2.png" alt="Image" width="500" height="500"
-                class="tm-margin-b-20 img-fluid righting">
+                class="tm-margin-b-20 img-fluid">
+            </div>
             <p align="justify">В этом случае каждый 16-битный канал обеспечивает такую же 32-байтную доступность, как и
                 одно
                 32-разрядное устройство GDDR5.</p>
             <hr>
-            <h2 class="tm-gold-text tm-title"> LPDDR</h2>
+            <h2 class="tm-gold-text tm-title">LPDDR</h2>
 
             <p align="justify">
                 Итак, DDR — память быстрая-прекрасная, но, так как вы помните, что конденсаторы нужно постоянно
@@ -531,7 +527,7 @@
                 увеличить интервалы обновления наших конденсаторов.
                 Добавили режим Deep Power Down, режим глубокого сна, в котором из памяти стирается абсолютно всё.
             </p>
-            <img src="img/LPDDR.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting">
+            <img src="img/LPDDR.jpg" alt="Image" width="500" height="500" class="tm-margin-b-20 img-fluid righting" style="margin: 15px 0 15px 30px">
             <p align="justify">
                 Однако такая оптимизация негавтино повлияла на скорость работы памяти.Но стандарт быстро развивался и
                 сейчас энергоэффективная память уже в некотрых аспектах предпочтительнее своего старшего брата.
